@@ -474,6 +474,48 @@
                 ""
             ],
             "uid": 4
+        },
+        {
+            "datums": [
+                {
+                    "expr": "0.0",
+                    "name": "x",
+                    "type": "float",
+                    "uid": 0
+                },
+                {
+                    "expr": "0.0",
+                    "name": "y",
+                    "type": "float",
+                    "uid": 1
+                },
+                {
+                    "expr": "0.0",
+                    "name": "z",
+                    "type": "float",
+                    "uid": 2
+                }
+            ],
+            "inspector": [
+                -400.88003750103127,
+                443.96527517637571
+            ],
+            "name": "p0",
+            "script": [
+                "import fab",
+                "",
+                "title('Point (3D)')",
+                "",
+                "input('x', float)",
+                "input('y', float)",
+                "input('z', float)",
+                "",
+                "# UI",
+                "sb.ui.point(x, y, z, color=(0,255,0))",
+                "",
+                ""
+            ],
+            "uid": 5
         }
     ],
     "protocol": 6,
