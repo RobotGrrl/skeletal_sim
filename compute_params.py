@@ -78,6 +78,12 @@ with open(antimony_file, "r+") as json_file:
 
 
 
+  for i in range(0, len(all_nodes)):
+    n = all_nodes[i]
+    for j in range(0, len(n.props)):
+      print "node #%d - props #%d: %s = %s" % (i, j, n.props[j]['name'], n.props[j]['val'])
+
+
 
 
 
