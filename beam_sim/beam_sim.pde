@@ -9,46 +9,86 @@ JSONObject json;
 float xpos = 0.0;
 float ypos = 0.0;
 float zpos = 0.0;
-float sq = 0.91;
-float len = 2.29;
-float theta = 0;
+float sq = 0.0;
+float len = 0.0;
+float rad = 0.0;
+float theta = 0.0;
 
 
 static float SCALE = 150.0;
 static float OFF_X = 50.0;
 static float OFF_Y = -20.0;
-static int NUM_POINTS = 4;
+static int NUM_CUBE_POINTS = 4;
+static int NUM_CYL_POINTS = 6;
 
-float points[][] = new float[NUM_POINTS][3];
+float left_cube_points[][] = new float[NUM_CUBE_POINTS][3];
+float cyl_points[][] = new float[NUM_CYL_POINTS][3];
+
 
 void makePoints() {
   
-  points[0][0] = xpos + (sq/2);
-  points[0][1] = ypos - (sq/2);
-  points[0][2] = zpos + (sq/2);
+  left_cube_points[0][0] = xpos + (sq/2);
+  left_cube_points[0][1] = ypos - (sq/2);
+  left_cube_points[0][2] = zpos + (sq/2);
   
-  points[1][0] = xpos + (sq/2);
-  points[1][1] = ypos - (sq/2);
-  points[1][2] = zpos - (sq/2);
+  left_cube_points[1][0] = xpos + (sq/2);
+  left_cube_points[1][1] = ypos - (sq/2);
+  left_cube_points[1][2] = zpos - (sq/2);
   
-  points[2][0] = xpos - (sq/2);
-  points[2][1] = ypos - (sq/2);
-  points[2][2] = zpos - (sq/2);
+  left_cube_points[2][0] = xpos - (sq/2);
+  left_cube_points[2][1] = ypos - (sq/2);
+  left_cube_points[2][2] = zpos - (sq/2);
   
-  points[3][0] = xpos - (sq/2);
-  points[3][1] = ypos - (sq/2);
-  points[3][2] = zpos + (sq/2);
+  left_cube_points[3][0] = xpos - (sq/2);
+  left_cube_points[3][1] = ypos - (sq/2);
+  left_cube_points[3][2] = zpos + (sq/2);
   
   // with this model, actually using x & z expressions
   // for the x & y coords
   
-  for(int i=0; i<NUM_POINTS; i++) {
+  for(int i=0; i<NUM_CUBE_POINTS; i++) {
     for(int j=0; j<3; j++) {
       if(j == 0 || j == 2) {
-        points[i][j] *= SCALE;
+        left_cube_points[i][j] *= SCALE;
       }
-      if(j == 0) points[i][j] += OFF_X;
-      if(j == 2) points[i][j] += OFF_Y;
+      if(j == 0) left_cube_points[i][j] += OFF_X;
+      if(j == 2) left_cube_points[i][j] += OFF_Y;
+    }
+  }
+  
+  
+  
+  cyl_points[0][0] = xpos + (sq/2);
+  cyl_points[0][1] = ypos;
+  cyl_points[0][2] = zpos + (sq/2);
+  
+  cyl_points[1][0] = xpos + (sq/2);
+  cyl_points[1][1] = ypos;
+  cyl_points[1][2] = zpos + (sq/2) - rad;
+  
+  cyl_points[2][0] = xpos + (len/2);
+  cyl_points[2][1] = ypos;
+  cyl_points[2][2] = zpos + (sq/2);
+  
+  cyl_points[3][0] = xpos + (len/2);
+  cyl_points[3][1] = ypos;
+  cyl_points[3][2] = zpos + (sq/2) - rad;
+  
+  cyl_points[4][0] = xpos + len - (sq/2);
+  cyl_points[4][1] = ypos;
+  cyl_points[4][2] = zpos + (sq/2);
+  
+  cyl_points[5][0] = xpos + len - (sq/2);
+  cyl_points[5][1] = ypos;
+  cyl_points[5][2] = zpos + (sq/2) - rad;
+  
+  for(int i=0; i<NUM_CYL_POINTS; i++) {
+    for(int j=0; j<3; j++) {
+      if(j == 0 || j == 2) {
+        cyl_points[i][j] *= SCALE;
+      }
+      if(j == 0) cyl_points[i][j] += OFF_X;
+      if(j == 2) cyl_points[i][j] += OFF_Y;
     }
   }
   
@@ -67,8 +107,12 @@ void draw() {
   
   fill(255);
   
-  for(int i=0; i<NUM_POINTS; i++) {
-    ellipse(points[i][0], points[i][2], 15, 15);
+  for(int i=0; i<NUM_CUBE_POINTS; i++) {
+    ellipse(left_cube_points[i][0], left_cube_points[i][2], 15, 15);
+  }
+  
+  for(int i=0; i<NUM_CYL_POINTS; i++) {
+    ellipse(cyl_points[i][0], cyl_points[i][2], 15, 15);
   }
   
 }
@@ -137,6 +181,7 @@ void loadDimNode(JSONArray datums) {
     if(data_name.equals("zpos")) zpos = Float.parseFloat(data_expr);
     if(data_name.equals("sq")) sq = Float.parseFloat(data_expr);
     if(data_name.equals("len")) len = Float.parseFloat(data_expr);
+    if(data_name.equals("rad")) rad = Float.parseFloat(data_expr);
     if(data_name.equals("theta")) theta = Float.parseFloat(data_expr);
     
   }

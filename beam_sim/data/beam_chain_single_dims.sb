@@ -27,13 +27,13 @@
                     "uid": 3
                 },
                 {
-                    "expr": "c1.width/3",
+                    "expr": "dim.rad",
                     "name": "r",
                     "type": "float",
                     "uid": 4
                 },
                 {
-                    "expr": "\u0012fab.types.Shape('a-r+q-Yf1.13q-Zf1.815f0.303333a-f0.94X-Xf3.23',float('0.940000'),float('0.826667'),float('1.511667'),float('3.230000'),float('1.433333'),float('2.118333'))",
+                    "expr": "\u0012fab.types.Shape('a-r+q-Yf1.13q-Zf1.815f0.34a-f0.94X-Xf3.23',float('0.940000'),float('0.790000'),float('1.475000'),float('3.230000'),float('1.470000'),float('2.155000'))",
                     "name": "shape",
                     "type": "_fabtypes.Shape",
                     "uid": 5
@@ -120,7 +120,7 @@
                     "uid": 4
                 },
                 {
-                    "expr": "\u0012fab.types.Shape('m-Xf0.94-Yf1.13-Zf0m+*f1X*f0Y+*f-0X*f1Y_m-Xf-0.94-Yf-1.13-Zf0iam__f1aa-f2.775X-Xf3.685a-f0.675Y-Yf1.585a-f0.905Z-Zf1.815aa-r+q-Yf1.13q-Zf1.815f0.303333a-f0.94X-Xf3.23nam__f1aa-f0.94X-Xf3.23a-f0.826667Y-Yf1.43333a-f1.815Z-Zf2.11833',float('0.940000'),float('0.675000'),float('0.905000'),float('3.685000'),float('1.585000'),float('2.118333'))",
+                    "expr": "\u0012fab.types.Shape('m-Xf0.94-Yf1.13-Zf0m+*f1X*f0Y+*f-0X*f1Y_m-Xf-0.94-Yf-1.13-Zf0iam__f1aa-f2.775X-Xf3.685a-f0.675Y-Yf1.585a-f0.905Z-Zf1.815aa-r+q-Yf1.13q-Zf1.815f0.34a-f0.94X-Xf3.23nam__f1aa-f0.94X-Xf3.23a-f0.79Y-Yf1.47a-f1.815Z-Zf2.155',float('0.940000'),float('0.675000'),float('0.905000'),float('3.685000'),float('1.585000'),float('2.155000'))",
                     "name": "rotated",
                     "type": "_fabtypes.Shape",
                     "uid": 5
@@ -397,7 +397,7 @@
                     "uid": 5
                 },
                 {
-                    "expr": "\u0012fab.types.Shape('am__f1aa-f0.94X-Xf3.23a-f0.826667Y-Yf1.43333a-f1.815Z-Zf2.11833',float('0.940000'),float('0.826667'),float('1.815000'),float('3.230000'),float('1.433333'),float('2.118333'))",
+                    "expr": "\u0012fab.types.Shape('am__f1aa-f0.94X-Xf3.23a-f0.79Y-Yf1.47a-f1.815Z-Zf2.155',float('0.940000'),float('0.790000'),float('1.815000'),float('3.230000'),float('1.470000'),float('2.155000'))",
                     "name": "shape",
                     "type": "_fabtypes.Shape",
                     "uid": 6
@@ -452,7 +452,7 @@
                     "uid": 1
                 },
                 {
-                    "expr": "\u0012fab.types.Shape('aa-r+q-Yf1.13q-Zf1.815f0.303333a-f0.94X-Xf3.23nam__f1aa-f0.94X-Xf3.23a-f0.826667Y-Yf1.43333a-f1.815Z-Zf2.11833',float('0.940000'),float('0.826667'),float('1.511667'),float('3.230000'),float('1.433333'),float('2.118333'))",
+                    "expr": "\u0012fab.types.Shape('aa-r+q-Yf1.13q-Zf1.815f0.34a-f0.94X-Xf3.23nam__f1aa-f0.94X-Xf3.23a-f0.79Y-Yf1.47a-f1.815Z-Zf2.155',float('0.940000'),float('0.790000'),float('1.475000'),float('3.230000'),float('1.470000'),float('2.155000'))",
                     "name": "shape",
                     "type": "_fabtypes.Shape",
                     "uid": 2
@@ -478,41 +478,109 @@
         {
             "datums": [
                 {
-                    "expr": "0.0",
-                    "name": "x",
+                    "expr": "dim.xpos + (dim.sq/2)",
+                    "name": "x1",
                     "type": "float",
-                    "uid": 0
+                    "uid": 3
                 },
                 {
-                    "expr": "0.0",
-                    "name": "y",
+                    "expr": "dim.ypos - (dim.sq/2)",
+                    "name": "y1",
                     "type": "float",
-                    "uid": 1
+                    "uid": 4
                 },
                 {
-                    "expr": "0.0",
-                    "name": "z",
+                    "expr": "dim.zpos + (dim.sq/2)",
+                    "name": "z1",
                     "type": "float",
-                    "uid": 2
+                    "uid": 5
+                },
+                {
+                    "expr": "dim.xpos + (dim.sq/2)",
+                    "name": "x2",
+                    "type": "float",
+                    "uid": 6
+                },
+                {
+                    "expr": "dim.ypos - (dim.sq/2)",
+                    "name": "y2",
+                    "type": "float",
+                    "uid": 7
+                },
+                {
+                    "expr": "dim.zpos - (dim.sq/2)",
+                    "name": "z2",
+                    "type": "float",
+                    "uid": 8
+                },
+                {
+                    "expr": "dim.xpos - (dim.sq/2)",
+                    "name": "x3",
+                    "type": "float",
+                    "uid": 9
+                },
+                {
+                    "expr": "dim.ypos - (dim.sq/2)",
+                    "name": "y3",
+                    "type": "float",
+                    "uid": 10
+                },
+                {
+                    "expr": "dim.zpos - (dim.sq/2)",
+                    "name": "z3",
+                    "type": "float",
+                    "uid": 11
+                },
+                {
+                    "expr": "dim.xpos - (dim.sq/2)",
+                    "name": "x4",
+                    "type": "float",
+                    "uid": 12
+                },
+                {
+                    "expr": "dim.ypos - (dim.sq/2)",
+                    "name": "y4",
+                    "type": "float",
+                    "uid": 13
+                },
+                {
+                    "expr": "dim.zpos + (dim.sq/2)",
+                    "name": "z4",
+                    "type": "float",
+                    "uid": 14
                 }
             ],
             "inspector": [
-                -400.88003750103127,
-                443.96527517637571
+                -470.85270618420657,
+                489.69955991099778
             ],
             "name": "p0",
             "script": [
                 "import fab",
                 "",
-                "title('Point (3D)')",
+                "title('Left cube points')",
                 "",
-                "input('x', float)",
-                "input('y', float)",
-                "input('z', float)",
+                "input('x1', float)",
+                "input('y1', float)",
+                "input('z1', float)",
+                "",
+                "input('x2', float)",
+                "input('y2', float)",
+                "input('z2', float)",
+                "",
+                "input('x3', float)",
+                "input('y3', float)",
+                "input('z3', float)",
+                "",
+                "input('x4', float)",
+                "input('y4', float)",
+                "input('z4', float)",
                 "",
                 "# UI",
-                "sb.ui.point(x, y, z, color=(0,255,0))",
-                "",
+                "sb.ui.point(x1, y1, z1, color=(0,255,0))",
+                "sb.ui.point(x2, y2, z2, color=(0,255,0))",
+                "sb.ui.point(x3, y3, z3, color=(0,255,0))",
+                "sb.ui.point(x4, y4, z4, color=(0,255,0))",
                 ""
             ],
             "uid": 5
@@ -550,6 +618,12 @@
                     "uid": 0
                 },
                 {
+                    "expr": "0.34",
+                    "name": "rad",
+                    "type": "float",
+                    "uid": 6
+                },
+                {
                     "expr": "0",
                     "name": "theta",
                     "type": "float",
@@ -557,8 +631,8 @@
                 }
             ],
             "inspector": [
-                -732.66284450501939,
-                -113.15377370157948
+                -750.42359483990947,
+                -123.78253930204909
             ],
             "name": "dim",
             "script": [
@@ -579,11 +653,214 @@
                 "input('zpos', float)",
                 "input('sq', float)",
                 "input('len', float)",
+                "input('rad', float)",
                 "input('theta', float)",
-                "",
                 ""
             ],
             "uid": 6
+        },
+        {
+            "datums": [
+                {
+                    "expr": "0.0",
+                    "name": "x",
+                    "type": "float",
+                    "uid": 0
+                },
+                {
+                    "expr": "0.0",
+                    "name": "y",
+                    "type": "float",
+                    "uid": 1
+                },
+                {
+                    "expr": "0.0",
+                    "name": "z",
+                    "type": "float",
+                    "uid": 2
+                }
+            ],
+            "inspector": [
+                61.851267561061988,
+                490.19437425259554
+            ],
+            "name": "p1",
+            "script": [
+                "import fab",
+                "",
+                "title('Right cube points')",
+                "",
+                "input('x', float)",
+                "input('y', float)",
+                "input('z', float)",
+                "",
+                "# UI",
+                "sb.ui.point(x, y, z)",
+                "",
+                ""
+            ],
+            "uid": 7
+        },
+        {
+            "datums": [
+                {
+                    "expr": "dim.xpos + (dim.sq/2)",
+                    "name": "x1_front",
+                    "type": "float",
+                    "uid": 8
+                },
+                {
+                    "expr": "dim.ypos",
+                    "name": "y1_front",
+                    "type": "float",
+                    "uid": 14
+                },
+                {
+                    "expr": "dim.zpos + (dim.sq/2)",
+                    "name": "z1_front",
+                    "type": "float",
+                    "uid": 20
+                },
+                {
+                    "expr": "dim.xpos + (dim.sq/2)",
+                    "name": "x2_front",
+                    "type": "float",
+                    "uid": 0
+                },
+                {
+                    "expr": "dim.ypos",
+                    "name": "y2_front",
+                    "type": "float",
+                    "uid": 1
+                },
+                {
+                    "expr": "dim.zpos + (dim.sq/2) - dim.rad ",
+                    "name": "z2_front",
+                    "type": "float",
+                    "uid": 2
+                },
+                {
+                    "expr": "dim.xpos + (dim.len/2)",
+                    "name": "x1_mid",
+                    "type": "float",
+                    "uid": 5
+                },
+                {
+                    "expr": "dim.ypos",
+                    "name": "y1_mid",
+                    "type": "float",
+                    "uid": 7
+                },
+                {
+                    "expr": "dim.zpos + (dim.sq/2)",
+                    "name": "z1_mid",
+                    "type": "float",
+                    "uid": 9
+                },
+                {
+                    "expr": "dim.xpos + (dim.len/2)",
+                    "name": "x2_mid",
+                    "type": "float",
+                    "uid": 10
+                },
+                {
+                    "expr": "dim.ypos",
+                    "name": "y2_mid",
+                    "type": "float",
+                    "uid": 12
+                },
+                {
+                    "expr": "dim.zpos + (dim.sq/2) - dim.rad",
+                    "name": "z2_mid",
+                    "type": "float",
+                    "uid": 13
+                },
+                {
+                    "expr": "dim.xpos + dim.len - (dim.sq/2)",
+                    "name": "x1_back",
+                    "type": "float",
+                    "uid": 6
+                },
+                {
+                    "expr": "dim.ypos",
+                    "name": "y1_back",
+                    "type": "float",
+                    "uid": 11
+                },
+                {
+                    "expr": "dim.zpos + (dim.sq/2)",
+                    "name": "z1_back",
+                    "type": "float",
+                    "uid": 16
+                },
+                {
+                    "expr": "dim.xpos + dim.len - (dim.sq/2)",
+                    "name": "x2_back",
+                    "type": "float",
+                    "uid": 17
+                },
+                {
+                    "expr": "dim.ypos",
+                    "name": "y2_back",
+                    "type": "float",
+                    "uid": 18
+                },
+                {
+                    "expr": "dim.zpos + (dim.sq/2) - dim.rad",
+                    "name": "z2_back",
+                    "type": "float",
+                    "uid": 19
+                }
+            ],
+            "inspector": [
+                -213.24840009858681,
+                492.04068074695556
+            ],
+            "name": "p2",
+            "script": [
+                "import fab",
+                "",
+                "title('Cylinder points')",
+                "",
+                "input('x1_front', float)",
+                "input('y1_front', float)",
+                "input('z1_front', float)",
+                "",
+                "input('x2_front', float)",
+                "input('y2_front', float)",
+                "input('z2_front', float)",
+                "",
+                "input('x1_mid', float)",
+                "input('y1_mid', float)",
+                "input('z1_mid', float)",
+                "",
+                "input('x2_mid', float)",
+                "input('y2_mid', float)",
+                "input('z2_mid', float)",
+                "",
+                "input('x1_back', float)",
+                "input('y1_back', float)",
+                "input('z1_back', float)",
+                "",
+                "input('x2_back', float)",
+                "input('y2_back', float)",
+                "input('z2_back', float)",
+                "",
+                "",
+                "",
+                "# UI",
+                "sb.ui.point(x1_front, y1_front, z1_front, color=(0,255,0))",
+                "sb.ui.point(x2_front, y2_front, z2_front, color=(0,255,0))",
+                "",
+                "sb.ui.point(x1_mid, y1_mid, z1_mid, color=(0,255,0))",
+                "sb.ui.point(x2_mid, y2_mid, z2_mid, color=(0,255,0))",
+                "",
+                "sb.ui.point(x1_back, y1_back, z1_back, color=(0,255,0))",
+                "sb.ui.point(x2_back, y2_back, z2_back, color=(0,255,0))",
+                "",
+                ""
+            ],
+            "uid": 8
         }
     ],
     "protocol": 6,
