@@ -33,7 +33,7 @@
                     "uid": 4
                 },
                 {
-                    "expr": "\u0012fab.types.Shape('a-r+q-Yf1q-Zf1.5f0.333333a-f1X-Xf3',float('1.000000'),float('0.666667'),float('1.166667'),float('3.000000'),float('1.333333'),float('1.833333'))",
+                    "expr": "\u0012fab.types.Shape('a-r+q-Yf1.13q-Zf1.815f0.303333a-f0.94X-Xf3.23',float('0.940000'),float('0.826667'),float('1.511667'),float('3.230000'),float('1.433333'),float('2.118333'))",
                     "name": "shape",
                     "type": "_fabtypes.Shape",
                     "uid": 5
@@ -120,7 +120,7 @@
                     "uid": 4
                 },
                 {
-                    "expr": "\u0012fab.types.Shape('m-Xf1-Yf1-Zf0m+*f1X*f0Y+*f-0X*f1Y_m-Xf-1-Yf-1-Zf0iam__f1aa-f2.5X-Xf3.5a-f0.5Y-Yf1.5a-f0.5Z-Zf1.5aa-r+q-Yf1q-Zf1.5f0.333333a-f1X-Xf3nam__f1aa-f1X-Xf3a-f0.666667Y-Yf1.33333a-f1.5Z-Zf1.83333',float('1.000000'),float('0.500000'),float('0.500000'),float('3.500000'),float('1.500000'),float('1.833333'))",
+                    "expr": "\u0012fab.types.Shape('m-Xf0.94-Yf1.13-Zf0m+*f1X*f0Y+*f-0X*f1Y_m-Xf-0.94-Yf-1.13-Zf0iam__f1aa-f2.775X-Xf3.685a-f0.675Y-Yf1.585a-f0.905Z-Zf1.815aa-r+q-Yf1.13q-Zf1.815f0.303333a-f0.94X-Xf3.23nam__f1aa-f0.94X-Xf3.23a-f0.826667Y-Yf1.43333a-f1.815Z-Zf2.11833',float('0.940000'),float('0.675000'),float('0.905000'),float('3.685000'),float('1.585000'),float('2.118333'))",
                     "name": "rotated",
                     "type": "_fabtypes.Shape",
                     "uid": 5
@@ -208,7 +208,7 @@
                     "uid": 5
                 },
                 {
-                    "expr": "\u0012fab.types.Shape('am__f1aa-f0.5X-Xf1.5a-f0.5Y-Yf1.5a-f0.5Z-Zf1.5',float('0.500000'),float('0.500000'),float('0.500000'),float('1.500000'),float('1.500000'),float('1.500000'))",
+                    "expr": "\u0012fab.types.Shape('am__f1aa-f0.485X-Xf1.395a-f0.675Y-Yf1.585a-f0.905Z-Zf1.815',float('0.485000'),float('0.675000'),float('0.905000'),float('1.395000'),float('1.585000'),float('1.815000'))",
                     "name": "shape",
                     "type": "_fabtypes.Shape",
                     "uid": 6
@@ -302,7 +302,7 @@
                     "uid": 5
                 },
                 {
-                    "expr": "\u0012fab.types.Shape('am__f1aa-f2.5X-Xf3.5a-f0.5Y-Yf1.5a-f0.5Z-Zf1.5',float('2.500000'),float('0.500000'),float('0.500000'),float('3.500000'),float('1.500000'),float('1.500000'))",
+                    "expr": "\u0012fab.types.Shape('am__f1aa-f2.775X-Xf3.685a-f0.675Y-Yf1.585a-f0.905Z-Zf1.815',float('2.775000'),float('0.675000'),float('0.905000'),float('3.685000'),float('1.585000'),float('1.815000'))",
                     "name": "shape",
                     "type": "_fabtypes.Shape",
                     "uid": 6
@@ -397,7 +397,7 @@
                     "uid": 5
                 },
                 {
-                    "expr": "\u0012fab.types.Shape('am__f1aa-f1X-Xf3a-f0.666667Y-Yf1.33333a-f1.5Z-Zf1.83333',float('1.000000'),float('0.666667'),float('1.500000'),float('3.000000'),float('1.333333'),float('1.833333'))",
+                    "expr": "\u0012fab.types.Shape('am__f1aa-f0.94X-Xf3.23a-f0.826667Y-Yf1.43333a-f1.815Z-Zf2.11833',float('0.940000'),float('0.826667'),float('1.815000'),float('3.230000'),float('1.433333'),float('2.118333'))",
                     "name": "shape",
                     "type": "_fabtypes.Shape",
                     "uid": 6
@@ -452,7 +452,7 @@
                     "uid": 1
                 },
                 {
-                    "expr": "\u0012fab.types.Shape('aa-r+q-Yf1q-Zf1.5f0.333333a-f1X-Xf3nam__f1aa-f1X-Xf3a-f0.666667Y-Yf1.33333a-f1.5Z-Zf1.83333',float('1.000000'),float('0.666667'),float('1.166667'),float('3.000000'),float('1.333333'),float('1.833333'))",
+                    "expr": "\u0012fab.types.Shape('aa-r+q-Yf1.13q-Zf1.815f0.303333a-f0.94X-Xf3.23nam__f1aa-f0.94X-Xf3.23a-f0.826667Y-Yf1.43333a-f1.815Z-Zf2.11833',float('0.940000'),float('0.826667'),float('1.511667'),float('3.230000'),float('1.433333'),float('2.118333'))",
                     "name": "shape",
                     "type": "_fabtypes.Shape",
                     "uid": 2
@@ -520,31 +520,31 @@
         {
             "datums": [
                 {
-                    "expr": "1",
+                    "expr": "0.94",
                     "name": "xpos",
                     "type": "float",
                     "uid": 2
                 },
                 {
-                    "expr": "1",
+                    "expr": "1.13",
                     "name": "ypos",
                     "type": "float",
                     "uid": 3
                 },
                 {
-                    "expr": "1",
+                    "expr": "1.36",
                     "name": "zpos",
                     "type": "float",
                     "uid": 4
                 },
                 {
-                    "expr": "1",
+                    "expr": "0.91",
                     "name": "sq",
                     "type": "float",
                     "uid": 5
                 },
                 {
-                    "expr": "2",
+                    "expr": "2.29",
                     "name": "len",
                     "type": "float",
                     "uid": 0
@@ -557,8 +557,8 @@
                 }
             ],
             "inspector": [
-                -716,
-                -123
+                -732.66284450501939,
+                -113.15377370157948
             ],
             "name": "dim",
             "script": [
