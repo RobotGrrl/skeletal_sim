@@ -16,13 +16,14 @@ float theta = 0.0;
 
 
 static float SCALE = 150.0;
-static float OFF_X = 50.0;
-static float OFF_Y = -20.0;
+static float OFF_X = 80.0;
+static float OFF_Y = 70.0;
 static int NUM_CUBE_POINTS = 4;
 static int NUM_CYL_POINTS = 6;
 
 float left_cube_points[][] = new float[NUM_CUBE_POINTS][3];
 float cyl_points[][] = new float[NUM_CYL_POINTS][3];
+float right_cube_points[][] = new float[NUM_CUBE_POINTS][3];
 
 
 void makePoints() {
@@ -92,12 +93,41 @@ void makePoints() {
     }
   }
   
+  
+  
+  right_cube_points[0][0] = xpos + len - (sq/2);
+  right_cube_points[0][1] = ypos - (sq/2);
+  right_cube_points[0][2] = zpos + (sq/2);
+  
+  right_cube_points[1][0] = xpos + len + (sq/2);
+  right_cube_points[1][1] = ypos - (sq/2);
+  right_cube_points[1][2] = zpos + (sq/2);
+  
+  right_cube_points[2][0] = xpos + len + (sq/2);
+  right_cube_points[2][1] = ypos - (sq/2);
+  right_cube_points[2][2] = zpos - (sq/2);
+  
+  right_cube_points[3][0] = xpos + len - (sq/2);
+  right_cube_points[3][1] = ypos - (sq/2);
+  right_cube_points[3][2] = zpos - (sq/2);
+  
+  for(int i=0; i<NUM_CUBE_POINTS; i++) {
+    for(int j=0; j<3; j++) {
+      if(j == 0 || j == 2) {
+        right_cube_points[i][j] *= SCALE;
+      }
+      if(j == 0) right_cube_points[i][j] += OFF_X;
+      if(j == 2) right_cube_points[i][j] += OFF_Y;
+    }
+  }
+  
+  
 }
 
 
 
 void setup() {
-  size(600, 600);
+  size(800, 600);
   smooth();
   readAntimonyFile();
 }
@@ -109,6 +139,7 @@ void draw() {
   
   for(int i=0; i<NUM_CUBE_POINTS; i++) {
     ellipse(left_cube_points[i][0], left_cube_points[i][2], 15, 15);
+    ellipse(right_cube_points[i][0], right_cube_points[i][2], 15, 15);
   }
   
   for(int i=0; i<NUM_CYL_POINTS; i++) {
