@@ -13,6 +13,49 @@ float sq = 0.91;
 float len = 2.29;
 float theta = 0;
 
+
+static float SCALE = 150.0;
+static float OFF_X = 50.0;
+static float OFF_Y = -20.0;
+static int NUM_POINTS = 4;
+
+float points[][] = new float[NUM_POINTS][3];
+
+void makePoints() {
+  
+  points[0][0] = xpos + (sq/2);
+  points[0][1] = ypos - (sq/2);
+  points[0][2] = zpos + (sq/2);
+  
+  points[1][0] = xpos + (sq/2);
+  points[1][1] = ypos - (sq/2);
+  points[1][2] = zpos - (sq/2);
+  
+  points[2][0] = xpos - (sq/2);
+  points[2][1] = ypos - (sq/2);
+  points[2][2] = zpos - (sq/2);
+  
+  points[3][0] = xpos - (sq/2);
+  points[3][1] = ypos - (sq/2);
+  points[3][2] = zpos + (sq/2);
+  
+  // with this model, actually using x & z expressions
+  // for the x & y coords
+  
+  for(int i=0; i<NUM_POINTS; i++) {
+    for(int j=0; j<3; j++) {
+      if(j == 0 || j == 2) {
+        points[i][j] *= SCALE;
+      }
+      if(j == 0) points[i][j] += OFF_X;
+      if(j == 2) points[i][j] += OFF_Y;
+    }
+  }
+  
+}
+
+
+
 void setup() {
   size(600, 600);
   smooth();
@@ -20,7 +63,14 @@ void setup() {
 }
 
 void draw() {
-  background(0);  
+  background(0);
+  
+  fill(255);
+  
+  for(int i=0; i<NUM_POINTS; i++) {
+    ellipse(points[i][0], points[i][2], 15, 15);
+  }
+  
 }
 
 void readAntimonyFile() {
@@ -64,6 +114,7 @@ void readAntimonyFile() {
     // loading in the dim inputs
     if(name.equals("dim")) {
       loadDimNode(datums); 
+      makePoints();
     }
     
   }
