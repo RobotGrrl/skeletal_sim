@@ -478,41 +478,109 @@
         {
             "datums": [
                 {
-                    "expr": "0.0",
-                    "name": "x",
+                    "expr": "dim.xpos + (dim.sq/2)",
+                    "name": "x1",
                     "type": "float",
-                    "uid": 0
+                    "uid": 3
                 },
                 {
-                    "expr": "0.0",
-                    "name": "y",
+                    "expr": "dim.ypos - (dim.sq/2)",
+                    "name": "y1",
                     "type": "float",
-                    "uid": 1
+                    "uid": 4
                 },
                 {
-                    "expr": "0.0",
-                    "name": "z",
+                    "expr": "dim.zpos + (dim.sq/2)",
+                    "name": "z1",
                     "type": "float",
-                    "uid": 2
+                    "uid": 5
+                },
+                {
+                    "expr": "dim.xpos + (dim.sq/2)",
+                    "name": "x2",
+                    "type": "float",
+                    "uid": 6
+                },
+                {
+                    "expr": "dim.ypos - (dim.sq/2)",
+                    "name": "y2",
+                    "type": "float",
+                    "uid": 7
+                },
+                {
+                    "expr": "dim.zpos - (dim.sq/2)",
+                    "name": "z2",
+                    "type": "float",
+                    "uid": 8
+                },
+                {
+                    "expr": "dim.xpos - (dim.sq/2)",
+                    "name": "x3",
+                    "type": "float",
+                    "uid": 9
+                },
+                {
+                    "expr": "dim.ypos - (dim.sq/2)",
+                    "name": "y3",
+                    "type": "float",
+                    "uid": 10
+                },
+                {
+                    "expr": "dim.zpos - (dim.sq/2)",
+                    "name": "z3",
+                    "type": "float",
+                    "uid": 11
+                },
+                {
+                    "expr": "dim.xpos - (dim.sq/2)",
+                    "name": "x4",
+                    "type": "float",
+                    "uid": 12
+                },
+                {
+                    "expr": "dim.ypos - (dim.sq/2)",
+                    "name": "y4",
+                    "type": "float",
+                    "uid": 13
+                },
+                {
+                    "expr": "dim.zpos + (dim.sq/2)",
+                    "name": "z4",
+                    "type": "float",
+                    "uid": 14
                 }
             ],
             "inspector": [
-                -400.88003750103127,
-                443.96527517637571
+                -470.85270618420657,
+                489.69955991099778
             ],
             "name": "p0",
             "script": [
                 "import fab",
                 "",
-                "title('Point (3D)')",
+                "title('Left cube points')",
                 "",
-                "input('x', float)",
-                "input('y', float)",
-                "input('z', float)",
+                "input('x1', float)",
+                "input('y1', float)",
+                "input('z1', float)",
+                "",
+                "input('x2', float)",
+                "input('y2', float)",
+                "input('z2', float)",
+                "",
+                "input('x3', float)",
+                "input('y3', float)",
+                "input('z3', float)",
+                "",
+                "input('x4', float)",
+                "input('y4', float)",
+                "input('z4', float)",
                 "",
                 "# UI",
-                "sb.ui.point(x, y, z, color=(0,255,0))",
-                "",
+                "sb.ui.point(x1, y1, z1, color=(0,255,0))",
+                "sb.ui.point(x2, y2, z2, color=(0,255,0))",
+                "sb.ui.point(x3, y3, z3, color=(0,255,0))",
+                "sb.ui.point(x4, y4, z4, color=(0,255,0))",
                 ""
             ],
             "uid": 5
@@ -557,8 +625,8 @@
                 }
             ],
             "inspector": [
-                -732.66284450501939,
-                -113.15377370157948
+                -750.42359483990947,
+                -123.78253930204909
             ],
             "name": "dim",
             "script": [
@@ -584,6 +652,48 @@
                 ""
             ],
             "uid": 6
+        },
+        {
+            "datums": [
+                {
+                    "expr": "0.0",
+                    "name": "x",
+                    "type": "float",
+                    "uid": 0
+                },
+                {
+                    "expr": "0.0",
+                    "name": "y",
+                    "type": "float",
+                    "uid": 1
+                },
+                {
+                    "expr": "0.0",
+                    "name": "z",
+                    "type": "float",
+                    "uid": 2
+                }
+            ],
+            "inspector": [
+                -198.4779481437063,
+                486.50176126387544
+            ],
+            "name": "p1",
+            "script": [
+                "import fab",
+                "",
+                "title('Right cube points')",
+                "",
+                "input('x', float)",
+                "input('y', float)",
+                "input('z', float)",
+                "",
+                "# UI",
+                "sb.ui.point(x, y, z)",
+                "",
+                ""
+            ],
+            "uid": 7
         }
     ],
     "protocol": 6,
