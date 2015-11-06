@@ -1,5 +1,17 @@
+/*
+
+
+*/
 
 JSONObject json;
+
+// inputs on dim node
+float xpos = 0.0;
+float ypos = 0.0;
+float zpos = 0.0;
+float sq = 0.91;
+float len = 2.29;
+float theta = 0;
 
 void setup() {
   size(600, 600);
@@ -13,7 +25,7 @@ void draw() {
 
 void readAntimonyFile() {
 
-  json = loadJSONObject("beam_chain_single.sb");
+  json = loadJSONObject("beam_chain_single_dims.sb");
   
   JSONArray nodes = json.getJSONArray("nodes");
   
@@ -48,10 +60,38 @@ void readAntimonyFile() {
     
     println("inspector node position = (" + inspector.getInt(0) + ", " + inspector.getInt(1) + ")");
     println("num lines in script = " + script.size());
+    
+    // loading in the dim inputs
+    if(name.equals("dim")) {
+      loadDimNode(datums); 
+    }
+    
   }
   
+}
+
+
+void loadDimNode(JSONArray datums) {
+ 
+  for(int j=0; j<datums.size(); j++) {
+    JSONObject data = datums.getJSONObject(j);
+    int data_uid = data.getInt("uid");
+    String data_name = data.getString("name");
+    String data_expr = data.getString("expr");
+    String data_type = data.getString("type");
+    //println("    " + data_name + " (" + data_type + ") expr = " + data_expr + " uid = " + data_uid);
+    
+    if(data_name.equals("xpos")) xpos = Float.parseFloat(data_expr);
+    if(data_name.equals("ypos")) ypos = Float.parseFloat(data_expr);
+    if(data_name.equals("zpos")) zpos = Float.parseFloat(data_expr);
+    if(data_name.equals("sq")) sq = Float.parseFloat(data_expr);
+    if(data_name.equals("len")) len = Float.parseFloat(data_expr);
+    if(data_name.equals("theta")) theta = Float.parseFloat(data_expr);
+    
+  }
   
 }
+
 
 /*
 todo:
