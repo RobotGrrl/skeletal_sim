@@ -52,15 +52,15 @@
                 "output('shape', fab.shapes.sphere(x, y, z, r))",
                 "",
                 "# UI",
-                "sb.ui.wireframe([",
-                "    (math.cos(i/36. * 2*math.pi) * r + x,",
-                "     math.sin(i/36. * 2*math.pi) * r + y, z)",
-                "    for i in range(36)], close=True)",
-                "sb.ui.wireframe([(x,y,z-r), (x,y,z+r)])",
+                "#sb.ui.wireframe([",
+                "#    (math.cos(i/36. * 2*math.pi) * r + x,",
+                "#     math.sin(i/36. * 2*math.pi) * r + y, z)",
+                "#    for i in range(36)], close=True)",
+                "#sb.ui.wireframe([(x,y,z-r), (x,y,z+r)])",
                 "",
-                "sb.ui.point(x, y, z)",
-                "sb.ui.point(x, y, z + r, drag=(None, None, r))",
-                "sb.ui.point(x, y, z - r, drag=(None, None, r))",
+                "#sb.ui.point(x, y, z)",
+                "#sb.ui.point(x, y, z + r, drag=(None, None, r))",
+                "#sb.ui.point(x, y, z - r, drag=(None, None, r))",
                 ""
             ],
             "uid": 2
@@ -68,22 +68,16 @@
         {
             "datums": [
                 {
-                    "expr": "0",
-                    "name": "x",
+                    "expr": "180",
+                    "name": "theta",
                     "type": "float",
                     "uid": 2
                 },
                 {
-                    "expr": "0",
-                    "name": "y",
+                    "expr": "60",
+                    "name": "phi",
                     "type": "float",
                     "uid": 3
-                },
-                {
-                    "expr": "0",
-                    "name": "z",
-                    "type": "float",
-                    "uid": 9
                 },
                 {
                     "expr": "1.29",
@@ -122,15 +116,15 @@
                     "uid": 1
                 },
                 {
-                    "expr": "\u0012fab.types.Shape('aam+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.64X-Xf0.64a-f-0.64Y-Yf0.64a-f0Z-Zf3.76nm+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.32X-Xf0.32a-f-0.32Y-Yf0.32a-f0Z-Zf3.76niiim-Xf0-Yf0-Zf0m+*f1X*f0Y+*f-0X*f1Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f6.12323e-17X*f1Y+*f-1X*f6.12323e-17Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1X*f1.22465e-16Y+*f-1.22465e-16X*f-1Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1.83697e-16X*f-1Y+*f1X*f-1.83697e-16Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37',float('-0.640000'),float('-0.640000'),float('0.000000'),float('0.640000'),float('0.640000'),float('3.760000'))",
+                    "expr": "\u0012fab.types.Shape('m-Xf0-Yf0-Zf0m+*f0.5X*f0.866025ZY+*f-0.866025X*f0.5Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m_+*f-1Y*f1.22465e-16Z+*f-1.22465e-16Y*f-1Zm-Xf0-Yf0-Zf0aam+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.64X-Xf0.64a-f-0.64Y-Yf0.64a-f0Z-Zf3.76nm+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.32X-Xf0.32a-f-0.32Y-Yf0.32a-f0Z-Zf3.76niiim-Xf0-Yf0-Zf0m+*f1X*f0Y+*f-0X*f1Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f6.12323e-17X*f1Y+*f-1X*f6.12323e-17Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1X*f1.22465e-16Y+*f-1.22465e-16X*f-1Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1.83697e-16X*f-1Y+*f1X*f-1.83697e-16Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37',float('-0.320000'),float('-0.640000'),float('-2.434256'),float('3.576254'),float('0.640000'),float('0.554256'))",
                     "name": "s",
                     "type": "_fabtypes.Shape",
                     "uid": 8
                 }
             ],
             "inspector": [
-                421.36340447351927,
-                1102.6075189129067
+                407.2928795309009,
+                1109.1737638861287
             ],
             "name": "s1",
             "script": [
@@ -138,9 +132,16 @@
                 "",
                 "title('problyramid')",
                 "",
-                "input('x', float)",
-                "input('y', float)",
-                "input('z', float)",
+                "#input('x', float)",
+                "#input('y', float)",
+                "#input('z', float)",
+                "",
+                "x = 0",
+                "y = 0",
+                "z = 0",
+                "",
+                "input('theta', float)",
+                "input('phi', float)",
                 "input('z0', float)",
                 "input('z1', float)",
                 "input('r', float)",
@@ -173,6 +174,12 @@
                 "# difference",
                 "s1 = p3 & ~c3",
                 "",
+                "# rotate longitude",
+                "s2 = fab.shapes.rotate_x(s1, theta, y, z)",
+                "",
+                "# rotate latitude",
+                "s3 = fab.shapes.rotate_y(s2, phi, y, z)",
+                "",
                 "# rotating the shape",
                 "#s2 = s1",
                 "#for i in range(0,5):",
@@ -180,7 +187,7 @@
                 "#  s2 |= fab.shapes.rotate_x(s1, deg, y, z)",
                 "",
                 "# output",
-                "output('s', s1)"
+                "output('s', s3)"
             ],
             "uid": 7
         },
@@ -251,166 +258,59 @@
         {
             "datums": [
                 {
-                    "expr": "0.0",
-                    "name": "_x",
-                    "type": "float",
-                    "uid": 0
-                },
-                {
-                    "expr": "0.0",
-                    "name": "y",
-                    "type": "float",
-                    "uid": 1
-                },
-                {
-                    "expr": "0.0",
-                    "name": "z",
-                    "type": "float",
+                    "expr": "\u0011[__7.__8]",
+                    "name": "s",
+                    "type": "_fabtypes.Shape",
                     "uid": 2
                 },
                 {
-                    "expr": "coords.theta",
-                    "name": "a",
-                    "type": "float",
+                    "expr": "14",
+                    "name": "n",
+                    "type": "int",
                     "uid": 3
                 },
                 {
-                    "expr": "\u0011[__7.__8]",
-                    "name": "shape",
+                    "expr": "\u0012fab.types.Shape('iiiiiiiiiiiiii-r++qXqYqZf0.01m-Xf0-Yf0-Zf0m+*f-0.669131X*f0.743145ZY+*f-0.743145X*f-0.669131Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m_+*f-0.669131Y*f-0.743145Z+*f0.743145Y*f-0.669131Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m+*f0.5X*f0.866025ZY+*f-0.866025X*f0.5Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m_+*f-1Y*f1.22465e-16Z+*f-1.22465e-16Y*f-1Zm-Xf0-Yf0-Zf0aam+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.64X-Xf0.64a-f-0.64Y-Yf0.64a-f0Z-Zf3.76nm+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.32X-Xf0.32a-f-0.32Y-Yf0.32a-f0Z-Zf3.76niiim-Xf0-Yf0-Zf0m+*f1X*f0Y+*f-0X*f1Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f6.12323e-17X*f1Y+*f-1X*f6.12323e-17Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1X*f1.22465e-16Y+*f-1.22465e-16X*f-1Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1.83697e-16X*f-1Y+*f1X*f-1.83697e-16Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-0.71934X*f0.694658ZY+*f-0.694658X*f-0.71934Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m_+*f-0.573576Y*f-0.819152Z+*f0.819152Y*f-0.573576Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m+*f0.5X*f0.866025ZY+*f-0.866025X*f0.5Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m_+*f-1Y*f1.22465e-16Z+*f-1.22465e-16Y*f-1Zm-Xf0-Yf0-Zf0aam+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.64X-Xf0.64a-f-0.64Y-Yf0.64a-f0Z-Zf3.76nm+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.32X-Xf0.32a-f-0.32Y-Yf0.32a-f0Z-Zf3.76niiim-Xf0-Yf0-Zf0m+*f1X*f0Y+*f-0X*f1Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f6.12323e-17X*f1Y+*f-1X*f6.12323e-17Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1X*f1.22465e-16Y+*f-1.22465e-16X*f-1Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1.83697e-16X*f-1Y+*f1X*f-1.83697e-16Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f0.292372X*f0.956305ZY+*f-0.956305X*f0.292372Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m_+*f0.207912Y*f0.978148Z+*f-0.978148Y*f0.207912Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m+*f0.5X*f0.866025ZY+*f-0.866025X*f0.5Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m_+*f-1Y*f1.22465e-16Z+*f-1.22465e-16Y*f-1Zm-Xf0-Yf0-Zf0aam+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.64X-Xf0.64a-f-0.64Y-Yf0.64a-f0Z-Zf3.76nm+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.32X-Xf0.32a-f-0.32Y-Yf0.32a-f0Z-Zf3.76niiim-Xf0-Yf0-Zf0m+*f1X*f0Y+*f-0X*f1Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f6.12323e-17X*f1Y+*f-1X*f6.12323e-17Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1X*f1.22465e-16Y+*f-1.22465e-16X*f-1Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1.83697e-16X*f-1Y+*f1X*f-1.83697e-16Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f0.997564X*f0.0697565ZY+*f-0.0697565X*f0.997564Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m_+*f-0.75471Y*f0.656059Z+*f-0.656059Y*f-0.75471Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m+*f0.5X*f0.866025ZY+*f-0.866025X*f0.5Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m_+*f-1Y*f1.22465e-16Z+*f-1.22465e-16Y*f-1Zm-Xf0-Yf0-Zf0aam+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.64X-Xf0.64a-f-0.64Y-Yf0.64a-f0Z-Zf3.76nm+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.32X-Xf0.32a-f-0.32Y-Yf0.32a-f0Z-Zf3.76niiim-Xf0-Yf0-Zf0m+*f1X*f0Y+*f-0X*f1Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f6.12323e-17X*f1Y+*f-1X*f6.12323e-17Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1X*f1.22465e-16Y+*f-1.22465e-16X*f-1Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1.83697e-16X*f-1Y+*f1X*f-1.83697e-16Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-0.951057X*f0.309017ZY+*f-0.309017X*f-0.951057Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m_+*f0.0871557Y*f-0.996195Z+*f0.996195Y*f0.0871557Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m+*f0.5X*f0.866025ZY+*f-0.866025X*f0.5Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m_+*f-1Y*f1.22465e-16Z+*f-1.22465e-16Y*f-1Zm-Xf0-Yf0-Zf0aam+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.64X-Xf0.64a-f-0.64Y-Yf0.64a-f0Z-Zf3.76nm+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.32X-Xf0.32a-f-0.32Y-Yf0.32a-f0Z-Zf3.76niiim-Xf0-Yf0-Zf0m+*f1X*f0Y+*f-0X*f1Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f6.12323e-17X*f1Y+*f-1X*f6.12323e-17Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1X*f1.22465e-16Y+*f-1.22465e-16X*f-1Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1.83697e-16X*f-1Y+*f1X*f-1.83697e-16Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-0.838671X*f0.544639ZY+*f-0.544639X*f-0.838671Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m_+*f-0.374607Y*f-0.927184Z+*f0.927184Y*f-0.374607Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m+*f0.5X*f0.866025ZY+*f-0.866025X*f0.5Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m_+*f-1Y*f1.22465e-16Z+*f-1.22465e-16Y*f-1Zm-Xf0-Yf0-Zf0aam+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.64X-Xf0.64a-f-0.64Y-Yf0.64a-f0Z-Zf3.76nm+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.32X-Xf0.32a-f-0.32Y-Yf0.32a-f0Z-Zf3.76niiim-Xf0-Yf0-Zf0m+*f1X*f0Y+*f-0X*f1Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f6.12323e-17X*f1Y+*f-1X*f6.12323e-17Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1X*f1.22465e-16Y+*f-1.22465e-16X*f-1Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1.83697e-16X*f-1Y+*f1X*f-1.83697e-16Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-0.62932X*f0.777146ZY+*f-0.777146X*f-0.62932Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m_+*f-0.694658Y*f-0.71934Z+*f0.71934Y*f-0.694658Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m+*f0.5X*f0.866025ZY+*f-0.866025X*f0.5Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m_+*f-1Y*f1.22465e-16Z+*f-1.22465e-16Y*f-1Zm-Xf0-Yf0-Zf0aam+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.64X-Xf0.64a-f-0.64Y-Yf0.64a-f0Z-Zf3.76nm+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.32X-Xf0.32a-f-0.32Y-Yf0.32a-f0Z-Zf3.76niiim-Xf0-Yf0-Zf0m+*f1X*f0Y+*f-0X*f1Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f6.12323e-17X*f1Y+*f-1X*f6.12323e-17Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1X*f1.22465e-16Y+*f-1.22465e-16X*f-1Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1.83697e-16X*f-1Y+*f1X*f-1.83697e-16Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f0.945519X*f0.325568ZY+*f-0.325568X*f0.945519Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m_+*f-0.819152Y*f-0.573576Z+*f0.573576Y*f-0.819152Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m+*f0.5X*f0.866025ZY+*f-0.866025X*f0.5Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m_+*f-1Y*f1.22465e-16Z+*f-1.22465e-16Y*f-1Zm-Xf0-Yf0-Zf0aam+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.64X-Xf0.64a-f-0.64Y-Yf0.64a-f0Z-Zf3.76nm+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.32X-Xf0.32a-f-0.32Y-Yf0.32a-f0Z-Zf3.76niiim-Xf0-Yf0-Zf0m+*f1X*f0Y+*f-0X*f1Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f6.12323e-17X*f1Y+*f-1X*f6.12323e-17Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1X*f1.22465e-16Y+*f-1.22465e-16X*f-1Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1.83697e-16X*f-1Y+*f1X*f-1.83697e-16Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f0.34202X*f0.939693ZY+*f-0.939693X*f0.34202Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m_+*f1Y*f0Z+*f-0Y*f1Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m+*f0.5X*f0.866025ZY+*f-0.866025X*f0.5Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m_+*f-1Y*f1.22465e-16Z+*f-1.22465e-16Y*f-1Zm-Xf0-Yf0-Zf0aam+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.64X-Xf0.64a-f-0.64Y-Yf0.64a-f0Z-Zf3.76nm+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.32X-Xf0.32a-f-0.32Y-Yf0.32a-f0Z-Zf3.76niiim-Xf0-Yf0-Zf0m+*f1X*f0Y+*f-0X*f1Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f6.12323e-17X*f1Y+*f-1X*f6.12323e-17Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1X*f1.22465e-16Y+*f-1.22465e-16X*f-1Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1.83697e-16X*f-1Y+*f1X*f-1.83697e-16Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f0.224951X*f0.97437ZY+*f-0.97437X*f0.224951Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m_+*f-0.615661Y*f0.788011Z+*f-0.788011Y*f-0.615661Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m+*f0.5X*f0.866025ZY+*f-0.866025X*f0.5Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m_+*f-1Y*f1.22465e-16Z+*f-1.22465e-16Y*f-1Zm-Xf0-Yf0-Zf0aam+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.64X-Xf0.64a-f-0.64Y-Yf0.64a-f0Z-Zf3.76nm+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.32X-Xf0.32a-f-0.32Y-Yf0.32a-f0Z-Zf3.76niiim-Xf0-Yf0-Zf0m+*f1X*f0Y+*f-0X*f1Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f6.12323e-17X*f1Y+*f-1X*f6.12323e-17Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1X*f1.22465e-16Y+*f-1.22465e-16X*f-1Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1.83697e-16X*f-1Y+*f1X*f-1.83697e-16Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-0.809017X*f0.587785ZY+*f-0.587785X*f-0.809017Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m_+*f0.970296Y*f-0.241922Z+*f0.241922Y*f0.970296Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m+*f0.5X*f0.866025ZY+*f-0.866025X*f0.5Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m_+*f-1Y*f1.22465e-16Z+*f-1.22465e-16Y*f-1Zm-Xf0-Yf0-Zf0aam+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.64X-Xf0.64a-f-0.64Y-Yf0.64a-f0Z-Zf3.76nm+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.32X-Xf0.32a-f-0.32Y-Yf0.32a-f0Z-Zf3.76niiim-Xf0-Yf0-Zf0m+*f1X*f0Y+*f-0X*f1Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f6.12323e-17X*f1Y+*f-1X*f6.12323e-17Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1X*f1.22465e-16Y+*f-1.22465e-16X*f-1Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1.83697e-16X*f-1Y+*f1X*f-1.83697e-16Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f0.996195X*f0.0871557ZY+*f-0.0871557X*f0.996195Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m_+*f-0.45399Y*f-0.891007Z+*f0.891007Y*f-0.45399Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m+*f0.5X*f0.866025ZY+*f-0.866025X*f0.5Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m_+*f-1Y*f1.22465e-16Z+*f-1.22465e-16Y*f-1Zm-Xf0-Yf0-Zf0aam+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.64X-Xf0.64a-f-0.64Y-Yf0.64a-f0Z-Zf3.76nm+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.32X-Xf0.32a-f-0.32Y-Yf0.32a-f0Z-Zf3.76niiim-Xf0-Yf0-Zf0m+*f1X*f0Y+*f-0X*f1Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f6.12323e-17X*f1Y+*f-1X*f6.12323e-17Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1X*f1.22465e-16Y+*f-1.22465e-16X*f-1Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1.83697e-16X*f-1Y+*f1X*f-1.83697e-16Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-0.292372X*f0.956305ZY+*f-0.956305X*f-0.292372Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m_+*f-0.848048Y*f-0.529919Z+*f0.529919Y*f-0.848048Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m+*f0.5X*f0.866025ZY+*f-0.866025X*f0.5Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m_+*f-1Y*f1.22465e-16Z+*f-1.22465e-16Y*f-1Zm-Xf0-Yf0-Zf0aam+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.64X-Xf0.64a-f-0.64Y-Yf0.64a-f0Z-Zf3.76nm+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.32X-Xf0.32a-f-0.32Y-Yf0.32a-f0Z-Zf3.76niiim-Xf0-Yf0-Zf0m+*f1X*f0Y+*f-0X*f1Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f6.12323e-17X*f1Y+*f-1X*f6.12323e-17Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1X*f1.22465e-16Y+*f-1.22465e-16X*f-1Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1.83697e-16X*f-1Y+*f1X*f-1.83697e-16Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f0.34202X*f0.939693ZY+*f-0.939693X*f0.34202Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m_+*f0.615661Y*f0.788011Z+*f-0.788011Y*f0.615661Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m+*f0.5X*f0.866025ZY+*f-0.866025X*f0.5Zm-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf0m_+*f-1Y*f1.22465e-16Z+*f-1.22465e-16Y*f-1Zm-Xf0-Yf0-Zf0aam+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.64X-Xf0.64a-f-0.64Y-Yf0.64a-f0Z-Zf3.76nm+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.32X-Xf0.32a-f-0.32Y-Yf0.32a-f0Z-Zf3.76niiim-Xf0-Yf0-Zf0m+*f1X*f0Y+*f-0X*f1Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f6.12323e-17X*f1Y+*f-1X*f6.12323e-17Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1X*f1.22465e-16Y+*f-1.22465e-16X*f-1Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1.83697e-16X*f-1Y+*f1X*f-1.83697e-16Y_m-Xf0-Yf0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37',float('-3.956893'),float('-2.496752'),float('-1.645959'),float('3.648742'),float('2.514126'),float('4.138186'))",
+                    "name": "s_final",
                     "type": "_fabtypes.Shape",
-                    "uid": 4
-                },
-                {
-                    "expr": "\u0012fab.types.Shape('m-Xf0-Yf0-Zf0m_+*f-1Y*f1.22465e-16Z+*f-1.22465e-16Y*f-1Zm-Xf0-Yf-0-Zf-0aam+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.64X-Xf0.64a-f-0.64Y-Yf0.64a-f0Z-Zf3.76nm+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.32X-Xf0.32a-f-0.32Y-Yf0.32a-f0Z-Zf3.76niiim-Xf0-Yf0-Zf0m+*f1X*f0Y+*f-0X*f1Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f6.12323e-17X*f1Y+*f-1X*f6.12323e-17Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1X*f1.22465e-16Y+*f-1.22465e-16X*f-1Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1.83697e-16X*f-1Y+*f1X*f-1.83697e-16Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37',float('-0.640000'),float('-0.640000'),float('-3.760000'),float('0.640000'),float('0.640000'),float('0.000000'))",
-                    "name": "rotated",
-                    "type": "_fabtypes.Shape",
-                    "uid": 5
+                    "uid": 1
                 }
             ],
             "inspector": [
-                739.07264976087811,
-                1097.0609644888036
+                723.22498205058844,
+                1118.1377154400798
             ],
-            "name": "r0",
+            "name": "s2",
             "script": [
                 "import fab",
                 "import math",
+                "import random",
                 "",
-                "title('Rotate (X)')",
+                "title('patterner')",
                 "",
-                "input('_x', float)",
-                "input('y', float)",
-                "input('z', float)",
-                "input('a', float)",
+                "input('s', fab.types.Shape)",
+                "input('n', int)",
                 "",
-                "input('shape', fab.types.Shape)",
-                "output('rotated', fab.shapes.rotate_x(shape, a, y, z))",
+                "y = 0",
+                "z = 0",
                 "",
-                "# UI",
-                "rad = math.radians(a)",
-                "sb.ui.wireframe([(_x, y + math.cos(rad), z + math.sin(rad)),",
-                "                  (_x, y, z),",
-                "                  (_x, y + 1, z)], color=sb.color.teal)",
+                "# placeholder shape",
+                "s_final = fab.shapes.sphere(0, 0, 0, 0.01)",
                 "",
-                "# Draw a semi-circular arc showing the rotation",
-                "if int(a) % 360 != 0:",
-                "    sb.ui.wireframe([",
-                "        (_x, y + math.cos(math.radians(a_)) * 0.3,",
-                "             z + math.sin(math.radians(a_)) * 0.3)",
-                "        for a_ in range(int(a) % 360)], color=sb.color.teal)",
-                "",
-                "sb.ui.point(_x, y, z, color=sb.color.teal)",
-                "",
-                "def drag_pt(this, x, y, z):",
-                "    this.a = math.degrees(math.atan2(z - this.z, y - this.y))",
-                "sb.ui.point(_x, y + math.cos(rad), z + math.sin(rad),",
-                "             color=sb.color.teal, drag=drag_pt, relative=False)",
-                "",
+                "# pattern loop",
+                "for i in range(0, n):",
+                "  theta = random.randrange(0, 360)",
+                "  phi = random.randrange(0, 180)",
+                "  # rotate longitude",
+                "  s1 = fab.shapes.rotate_x(s, theta, y, z)",
+                "  # rotate latitude",
+                "  s2 = fab.shapes.rotate_y(s1, phi, y, z)  ",
+                "  s_final |= s2",
+                "  ",
+                "output('s_final', s_final)",
                 ""
             ],
             "uid": 1
-        },
-        {
-            "datums": [
-                {
-                    "expr": "0.0",
-                    "name": "x",
-                    "type": "float",
-                    "uid": 0
-                },
-                {
-                    "expr": "0.0",
-                    "name": "_y",
-                    "type": "float",
-                    "uid": 1
-                },
-                {
-                    "expr": "0.0",
-                    "name": "z",
-                    "type": "float",
-                    "uid": 2
-                },
-                {
-                    "expr": "coords.phi",
-                    "name": "a",
-                    "type": "float",
-                    "uid": 3
-                },
-                {
-                    "expr": "\u0011[__1.__5]",
-                    "name": "shape",
-                    "type": "_fabtypes.Shape",
-                    "uid": 4
-                },
-                {
-                    "expr": "\u0012fab.types.Shape('m-Xf0-Yf0-Zf0m+*f6.12323e-17X*f1ZY+*f-1X*f6.12323e-17Zm-Xf-0-Yf0-Zf-0m-Xf0-Yf0-Zf0m_+*f-1Y*f1.22465e-16Z+*f-1.22465e-16Y*f-1Zm-Xf0-Yf-0-Zf-0aam+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.64X-Xf0.64a-f-0.64Y-Yf0.64a-f0Z-Zf3.76nm+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.32X-Xf0.32a-f-0.32Y-Yf0.32a-f0Z-Zf3.76niiim-Xf0-Yf0-Zf0m+*f1X*f0Y+*f-0X*f1Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f6.12323e-17X*f1Y+*f-1X*f6.12323e-17Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1X*f1.22465e-16Y+*f-1.22465e-16X*f-1Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1.83697e-16X*f-1Y+*f1X*f-1.83697e-16Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37',float('-0.000000'),float('-0.640000'),float('-0.640000'),float('3.760000'),float('0.640000'),float('0.640000'))",
-                    "name": "rotated",
-                    "type": "_fabtypes.Shape",
-                    "uid": 5
-                }
-            ],
-            "inspector": [
-                1046.6943898187299,
-                1093.3598511049613
-            ],
-            "name": "r1",
-            "script": [
-                "import fab",
-                "import math",
-                "",
-                "title('Rotate (Y)')",
-                "",
-                "input('x', float)",
-                "input('_y', float)",
-                "input('z', float)",
-                "input('a', float)",
-                "",
-                "input('shape', fab.types.Shape)",
-                "output('rotated', fab.shapes.rotate_y(shape, a, x, z))",
-                "",
-                "# UI",
-                "rad = math.radians(a)",
-                "sb.ui.wireframe([(x + math.cos(rad), _y, z + math.sin(rad)),",
-                "                  (x, _y, z),",
-                "                  (x + 1, _y, z)], color=sb.color.teal)",
-                "",
-                "# Draw a semi-circular arc showing the rotation",
-                "if int(a) % 360 != 0:",
-                "    sb.ui.wireframe([",
-                "        (x + math.cos(math.radians(a_)) * 0.3, _y,",
-                "         z + math.sin(math.radians(a_)) * 0.3)",
-                "        for a_ in range(int(a) % 360)], color=sb.color.teal)",
-                "",
-                "sb.ui.point(x, _y, z, color=sb.color.teal)",
-                "",
-                "def drag_pt(this, x, y, z):",
-                "    this.a = math.degrees(math.atan2(z - this.z, x - this.x))",
-                "sb.ui.point(x + math.cos(rad), _y, z + math.sin(rad),",
-                "             color=sb.color.teal, drag=drag_pt, relative=False)",
-                "",
-                ""
-            ],
-            "uid": 3
         }
     ],
     "protocol": 6,
