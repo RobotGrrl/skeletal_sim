@@ -80,19 +80,19 @@
                     "uid": 3
                 },
                 {
-                    "expr": "-0.15",
+                    "expr": "0",
                     "name": "z",
                     "type": "float",
                     "uid": 9
                 },
                 {
-                    "expr": "1.44",
+                    "expr": "1.29",
                     "name": "z0",
                     "type": "float",
                     "uid": 4
                 },
                 {
-                    "expr": "3.6",
+                    "expr": "4.37",
                     "name": "z1",
                     "type": "float",
                     "uid": 5
@@ -122,174 +122,17 @@
                     "uid": 1
                 },
                 {
-                    "expr": "\u0012fab.types.Shape('iiiiiaam+f0/*-Xf0f3.76+*f0-Zf-0.15*f1-f3.61Z+f0/*-Yf0f3.76+*f0-Zf-0.15*f1-f3.61Z_am__f1aa-f-0.64X-Xf0.64a-f-0.64Y-Yf0.64a-f-0.15Z-Zf3.61nm+f0/*-Xf0f3.76+*f0-Zf-0.15*f1-f3.61Z+f0/*-Yf0f3.76+*f0-Zf-0.15*f1-f3.61Z_am__f1aa-f-0.32X-Xf0.32a-f-0.32Y-Yf0.32a-f-0.15Z-Zf3.61niiim-Xf0-Yf0-Zf0m+*f1X*f0Y+*f-0X*f1Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.44m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.44m+f0/*-Xf0f2.16+*f0-Zf1.44*f1-f3.6Z+f0/*-Yf0f2.16+*f0-Zf1.44*f1-f3.6Z_am__f1-r+qXqYf0.32a-f1.44Z-Zf3.6m-Xf0-Yf0-Zf0m+*f6.12323e-17X*f1Y+*f-1X*f6.12323e-17Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.44m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.44m+f0/*-Xf0f2.16+*f0-Zf1.44*f1-f3.6Z+f0/*-Yf0f2.16+*f0-Zf1.44*f1-f3.6Z_am__f1-r+qXqYf0.32a-f1.44Z-Zf3.6m-Xf0-Yf0-Zf0m+*f-1X*f1.22465e-16Y+*f-1.22465e-16X*f-1Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.44m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.44m+f0/*-Xf0f2.16+*f0-Zf1.44*f1-f3.6Z+f0/*-Yf0f2.16+*f0-Zf1.44*f1-f3.6Z_am__f1-r+qXqYf0.32a-f1.44Z-Zf3.6m-Xf0-Yf0-Zf0m+*f-1.83697e-16X*f-1Y+*f1X*f-1.83697e-16Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.44m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.44m+f0/*-Xf0f2.16+*f0-Zf1.44*f1-f3.6Z+f0/*-Yf0f2.16+*f0-Zf1.44*f1-f3.6Z_am__f1-r+qXqYf0.32a-f1.44Z-Zf3.6m-Xf0-Yf0-Zf-0.15m_+*f1Y*f0Z+*f-0Y*f1Zm-Xf0-Yf-0-Zf0.15aam+f0/*-Xf0f3.76+*f0-Zf-0.15*f1-f3.61Z+f0/*-Yf0f3.76+*f0-Zf-0.15*f1-f3.61Z_am__f1aa-f-0.64X-Xf0.64a-f-0.64Y-Yf0.64a-f-0.15Z-Zf3.61nm+f0/*-Xf0f3.76+*f0-Zf-0.15*f1-f3.61Z+f0/*-Yf0f3.76+*f0-Zf-0.15*f1-f3.61Z_am__f1aa-f-0.32X-Xf0.32a-f-0.32Y-Yf0.32a-f-0.15Z-Zf3.61niiim-Xf0-Yf0-Zf0m+*f1X*f0Y+*f-0X*f1Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.44m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.44m+f0/*-Xf0f2.16+*f0-Zf1.44*f1-f3.6Z+f0/*-Yf0f2.16+*f0-Zf1.44*f1-f3.6Z_am__f1-r+qXqYf0.32a-f1.44Z-Zf3.6m-Xf0-Yf0-Zf0m+*f6.12323e-17X*f1Y+*f-1X*f6.12323e-17Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.44m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.44m+f0/*-Xf0f2.16+*f0-Zf1.44*f1-f3.6Z+f0/*-Yf0f2.16+*f0-Zf1.44*f1-f3.6Z_am__f1-r+qXqYf0.32a-f1.44Z-Zf3.6m-Xf0-Yf0-Zf0m+*f-1X*f1.22465e-16Y+*f-1.22465e-16X*f-1Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.44m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.44m+f0/*-Xf0f2.16+*f0-Zf1.44*f1-f3.6Z+f0/*-Yf0f2.16+*f0-Zf1.44*f1-f3.6Z_am__f1-r+qXqYf0.32a-f1.44Z-Zf3.6m-Xf0-Yf0-Zf0m+*f-1.83697e-16X*f-1Y+*f1X*f-1.83697e-16Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.44m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.44m+f0/*-Xf0f2.16+*f0-Zf1.44*f1-f3.6Z+f0/*-Yf0f2.16+*f0-Zf1.44*f1-f3.6Z_am__f1-r+qXqYf0.32a-f1.44Z-Zf3.6m-Xf0-Yf0-Zf-0.15m_+*f0.309017Y*f0.951057Z+*f-0.951057Y*f0.309017Zm-Xf0-Yf-0-Zf0.15aam+f0/*-Xf0f3.76+*f0-Zf-0.15*f1-f3.61Z+f0/*-Yf0f3.76+*f0-Zf-0.15*f1-f3.61Z_am__f1aa-f-0.64X-Xf0.64a-f-0.64Y-Yf0.64a-f-0.15Z-Zf3.61nm+f0/*-Xf0f3.76+*f0-Zf-0.15*f1-f3.61Z+f0/*-Yf0f3.76+*f0-Zf-0.15*f1-f3.61Z_am__f1aa-f-0.32X-Xf0.32a-f-0.32Y-Yf0.32a-f-0.15Z-Zf3.61niiim-Xf0-Yf0-Zf0m+*f1X*f0Y+*f-0X*f1Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.44m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.44m+f0/*-Xf0f2.16+*f0-Zf1.44*f1-f3.6Z+f0/*-Yf0f2.16+*f0-Zf1.44*f1-f3.6Z_am__f1-r+qXqYf0.32a-f1.44Z-Zf3.6m-Xf0-Yf0-Zf0m+*f6.12323e-17X*f1Y+*f-1X*f6.12323e-17Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.44m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.44m+f0/*-Xf0f2.16+*f0-Zf1.44*f1-f3.6Z+f0/*-Yf0f2.16+*f0-Zf1.44*f1-f3.6Z_am__f1-r+qXqYf0.32a-f1.44Z-Zf3.6m-Xf0-Yf0-Zf0m+*f-1X*f1.22465e-16Y+*f-1.22465e-16X*f-1Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.44m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.44m+f0/*-Xf0f2.16+*f0-Zf1.44*f1-f3.6Z+f0/*-Yf0f2.16+*f0-Zf1.44*f1-f3.6Z_am__f1-r+qXqYf0.32a-f1.44Z-Zf3.6m-Xf0-Yf0-Zf0m+*f-1.83697e-16X*f-1Y+*f1X*f-1.83697e-16Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.44m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.44m+f0/*-Xf0f2.16+*f0-Zf1.44*f1-f3.6Z+f0/*-Yf0f2.16+*f0-Zf1.44*f1-f3.6Z_am__f1-r+qXqYf0.32a-f1.44Z-Zf3.6m-Xf0-Yf0-Zf-0.15m_+*f-0.809017Y*f0.587785Z+*f-0.587785Y*f-0.809017Zm-Xf0-Yf-0-Zf0.15aam+f0/*-Xf0f3.76+*f0-Zf-0.15*f1-f3.61Z+f0/*-Yf0f3.76+*f0-Zf-0.15*f1-f3.61Z_am__f1aa-f-0.64X-Xf0.64a-f-0.64Y-Yf0.64a-f-0.15Z-Zf3.61nm+f0/*-Xf0f3.76+*f0-Zf-0.15*f1-f3.61Z+f0/*-Yf0f3.76+*f0-Zf-0.15*f1-f3.61Z_am__f1aa-f-0.32X-Xf0.32a-f-0.32Y-Yf0.32a-f-0.15Z-Zf3.61niiim-Xf0-Yf0-Zf0m+*f1X*f0Y+*f-0X*f1Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.44m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.44m+f0/*-Xf0f2.16+*f0-Zf1.44*f1-f3.6Z+f0/*-Yf0f2.16+*f0-Zf1.44*f1-f3.6Z_am__f1-r+qXqYf0.32a-f1.44Z-Zf3.6m-Xf0-Yf0-Zf0m+*f6.12323e-17X*f1Y+*f-1X*f6.12323e-17Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.44m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.44m+f0/*-Xf0f2.16+*f0-Zf1.44*f1-f3.6Z+f0/*-Yf0f2.16+*f0-Zf1.44*f1-f3.6Z_am__f1-r+qXqYf0.32a-f1.44Z-Zf3.6m-Xf0-Yf0-Zf0m+*f-1X*f1.22465e-16Y+*f-1.22465e-16X*f-1Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.44m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.44m+f0/*-Xf0f2.16+*f0-Zf1.44*f1-f3.6Z+f0/*-Yf0f2.16+*f0-Zf1.44*f1-f3.6Z_am__f1-r+qXqYf0.32a-f1.44Z-Zf3.6m-Xf0-Yf0-Zf0m+*f-1.83697e-16X*f-1Y+*f1X*f-1.83697e-16Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.44m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.44m+f0/*-Xf0f2.16+*f0-Zf1.44*f1-f3.6Z+f0/*-Yf0f2.16+*f0-Zf1.44*f1-f3.6Z_am__f1-r+qXqYf0.32a-f1.44Z-Zf3.6m-Xf0-Yf0-Zf-0.15m_+*f-0.809017Y*f-0.587785Z+*f0.587785Y*f-0.809017Zm-Xf0-Yf-0-Zf0.15aam+f0/*-Xf0f3.76+*f0-Zf-0.15*f1-f3.61Z+f0/*-Yf0f3.76+*f0-Zf-0.15*f1-f3.61Z_am__f1aa-f-0.64X-Xf0.64a-f-0.64Y-Yf0.64a-f-0.15Z-Zf3.61nm+f0/*-Xf0f3.76+*f0-Zf-0.15*f1-f3.61Z+f0/*-Yf0f3.76+*f0-Zf-0.15*f1-f3.61Z_am__f1aa-f-0.32X-Xf0.32a-f-0.32Y-Yf0.32a-f-0.15Z-Zf3.61niiim-Xf0-Yf0-Zf0m+*f1X*f0Y+*f-0X*f1Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.44m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.44m+f0/*-Xf0f2.16+*f0-Zf1.44*f1-f3.6Z+f0/*-Yf0f2.16+*f0-Zf1.44*f1-f3.6Z_am__f1-r+qXqYf0.32a-f1.44Z-Zf3.6m-Xf0-Yf0-Zf0m+*f6.12323e-17X*f1Y+*f-1X*f6.12323e-17Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.44m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.44m+f0/*-Xf0f2.16+*f0-Zf1.44*f1-f3.6Z+f0/*-Yf0f2.16+*f0-Zf1.44*f1-f3.6Z_am__f1-r+qXqYf0.32a-f1.44Z-Zf3.6m-Xf0-Yf0-Zf0m+*f-1X*f1.22465e-16Y+*f-1.22465e-16X*f-1Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.44m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.44m+f0/*-Xf0f2.16+*f0-Zf1.44*f1-f3.6Z+f0/*-Yf0f2.16+*f0-Zf1.44*f1-f3.6Z_am__f1-r+qXqYf0.32a-f1.44Z-Zf3.6m-Xf0-Yf0-Zf0m+*f-1.83697e-16X*f-1Y+*f1X*f-1.83697e-16Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.44m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.44m+f0/*-Xf0f2.16+*f0-Zf1.44*f1-f3.6Z+f0/*-Yf0f2.16+*f0-Zf1.44*f1-f3.6Z_am__f1-r+qXqYf0.32a-f1.44Z-Zf3.6m-Xf0-Yf0-Zf-0.15m_+*f0.309017Y*f-0.951057Z+*f0.951057Y*f0.309017Zm-Xf0-Yf-0-Zf0.15aam+f0/*-Xf0f3.76+*f0-Zf-0.15*f1-f3.61Z+f0/*-Yf0f3.76+*f0-Zf-0.15*f1-f3.61Z_am__f1aa-f-0.64X-Xf0.64a-f-0.64Y-Yf0.64a-f-0.15Z-Zf3.61nm+f0/*-Xf0f3.76+*f0-Zf-0.15*f1-f3.61Z+f0/*-Yf0f3.76+*f0-Zf-0.15*f1-f3.61Z_am__f1aa-f-0.32X-Xf0.32a-f-0.32Y-Yf0.32a-f-0.15Z-Zf3.61niiim-Xf0-Yf0-Zf0m+*f1X*f0Y+*f-0X*f1Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.44m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.44m+f0/*-Xf0f2.16+*f0-Zf1.44*f1-f3.6Z+f0/*-Yf0f2.16+*f0-Zf1.44*f1-f3.6Z_am__f1-r+qXqYf0.32a-f1.44Z-Zf3.6m-Xf0-Yf0-Zf0m+*f6.12323e-17X*f1Y+*f-1X*f6.12323e-17Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.44m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.44m+f0/*-Xf0f2.16+*f0-Zf1.44*f1-f3.6Z+f0/*-Yf0f2.16+*f0-Zf1.44*f1-f3.6Z_am__f1-r+qXqYf0.32a-f1.44Z-Zf3.6m-Xf0-Yf0-Zf0m+*f-1X*f1.22465e-16Y+*f-1.22465e-16X*f-1Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.44m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.44m+f0/*-Xf0f2.16+*f0-Zf1.44*f1-f3.6Z+f0/*-Yf0f2.16+*f0-Zf1.44*f1-f3.6Z_am__f1-r+qXqYf0.32a-f1.44Z-Zf3.6m-Xf0-Yf0-Zf0m+*f-1.83697e-16X*f-1Y+*f1X*f-1.83697e-16Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.44m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.44m+f0/*-Xf0f2.16+*f0-Zf1.44*f1-f3.6Z+f0/*-Yf0f2.16+*f0-Zf1.44*f1-f3.6Z_am__f1-r+qXqYf0.32a-f1.44Z-Zf3.6',float('-0.640000'),float('-3.773745'),float('-3.568086'),float('0.640000'),float('3.773745'),float('3.610000'))",
+                    "expr": "\u0012fab.types.Shape('aam+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.64X-Xf0.64a-f-0.64Y-Yf0.64a-f0Z-Zf3.76nm+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.32X-Xf0.32a-f-0.32Y-Yf0.32a-f0Z-Zf3.76niiim-Xf0-Yf0-Zf0m+*f1X*f0Y+*f-0X*f1Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f6.12323e-17X*f1Y+*f-1X*f6.12323e-17Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1X*f1.22465e-16Y+*f-1.22465e-16X*f-1Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1.83697e-16X*f-1Y+*f1X*f-1.83697e-16Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37',float('-0.640000'),float('-0.640000'),float('0.000000'),float('0.640000'),float('0.640000'),float('3.760000'))",
                     "name": "s",
                     "type": "_fabtypes.Shape",
                     "uid": 8
                 }
             ],
             "inspector": [
-                397.11258315324096,
-                1019.4618458148082
+                421.36340447351927,
+                1102.6075189129067
             ],
             "name": "s1",
-            "script": [
-                "import fab",
-                "",
-                "title('problyramid')",
-                "",
-                "input('x', float)",
-                "input('y', float)",
-                "input('z', float)",
-                "input('z0', float)",
-                "input('z1', float)",
-                "input('r', float)",
-                "input('width', float)",
-                "input('height', float)",
-                "input('a', float)",
-                "",
-                "# pyramid",
-                "p1 = fab.shapes.pyramid(x - width/2, x + width/2,",
-                "                        y - width/2, y + width/2,",
-                "                        z, z + height)",
-                "",
-                "# cone",
-                "c1 = fab.shapes.cone(x, y, z0, z1, r)",
-                "",
-                "# rotate X",
-                "c2 = fab.shapes.rotate_x(c1, a, y, z0)",
-                "",
-                "# polar",
-                "c3 = fab.shapes.iterate_polar(c2, x, y, 4)",
-                "",
-                "# inner pyramid",
-                "p2 = fab.shapes.pyramid(x - width/4, x + width/4,",
-                "                        y - width/4, y + width/4,",
-                "                        z, z + height)",
-                "",
-                "# shell pyramid",
-                "p3 = p1 & ~p2",
-                "",
-                "# difference",
-                "s1 = p3 & ~c3",
-                "",
-                "# rotating the shape",
-                "s2 = s1",
-                "for i in range(0,5):",
-                "  deg = i*72",
-                "  s2 |= fab.shapes.rotate_x(s1, deg, y, z)",
-                "",
-                "# output",
-                "output('s', s2)"
-            ],
-            "uid": 7
-        },
-        {
-            "datums": [
-                {
-                    "expr": "fab.types.Shape('=1;')",
-                    "name": "a",
-                    "type": "_fabtypes.Shape",
-                    "uid": 0
-                },
-                {
-                    "expr": "fab.types.Shape('=1;')",
-                    "name": "b",
-                    "type": "_fabtypes.Shape",
-                    "uid": 1
-                },
-                {
-                    "expr": "\u0012fab.types.Shape('i=1;=1;')",
-                    "name": "shape",
-                    "type": "_fabtypes.Shape",
-                    "uid": 2
-                }
-            ],
-            "inspector": [
-                694.0354101660746,
-                1027.7729035737214
-            ],
-            "name": "u0",
-            "script": [
-                "import fab.types",
-                "",
-                "title('Union')",
-                "input('a', fab.types.Shape)",
-                "input('b', fab.types.Shape)",
-                "",
-                "output('shape', a | b)",
-                ""
-            ],
-            "uid": 0
-        },
-        {
-            "datums": [
-                {
-                    "expr": "0.13",
-                    "name": "x",
-                    "type": "float",
-                    "uid": 2
-                },
-                {
-                    "expr": "0.17",
-                    "name": "y",
-                    "type": "float",
-                    "uid": 3
-                },
-                {
-                    "expr": "0.05",
-                    "name": "z",
-                    "type": "float",
-                    "uid": 4
-                },
-                {
-                    "expr": "1.49",
-                    "name": "z0",
-                    "type": "float",
-                    "uid": 5
-                },
-                {
-                    "expr": "3.69",
-                    "name": "z1",
-                    "type": "float",
-                    "uid": 6
-                },
-                {
-                    "expr": "0.26",
-                    "name": "r",
-                    "type": "float",
-                    "uid": 0
-                },
-                {
-                    "expr": "1.33",
-                    "name": "width",
-                    "type": "float",
-                    "uid": 7
-                },
-                {
-                    "expr": "5.04",
-                    "name": "height",
-                    "type": "float",
-                    "uid": 8
-                },
-                {
-                    "expr": "0.0",
-                    "name": "a",
-                    "type": "float",
-                    "uid": 9
-                },
-                {
-                    "expr": "\u0012fab.types.Shape('aam+f0.13/*-Xf0.13f5.04+*f0-Zf0.05*f1-f5.09Z+f0.17/*-Yf0.17f5.04+*f0-Zf0.05*f1-f5.09Z_am__f1aa-f-0.535X-Xf0.795a-f-0.495Y-Yf0.835a-f0.05Z-Zf5.09nm+f0.13/*-Xf0.13f5.04+*f0-Zf0.05*f1-f5.09Z+f0.17/*-Yf0.17f5.04+*f0-Zf0.05*f1-f5.09Z_am__f1aa-f-0.2025X-Xf0.4625a-f-0.1625Y-Yf0.5025a-f0.05Z-Zf5.09niiim-Xf0.13-Yf0.17-Zf0m+*f1X*f0Y+*f-0X*f1Y_m-Xf-0.13-Yf-0.17-Zf0m-Xf0-Yf0.17-Zf1.49m_+*f1Y*f0Z+*f-0Y*f1Zm-Xf0-Yf-0.17-Zf-1.49m+f0.13/*-Xf0.13f2.2+*f0-Zf1.49*f1-f3.69Z+f0.17/*-Yf0.17f2.2+*f0-Zf1.49*f1-f3.69Z_am__f1-r+q-Xf0.13q-Yf0.17f0.26a-f1.49Z-Zf3.69m-Xf0.13-Yf0.17-Zf0m+*f6.12323e-17X*f1Y+*f-1X*f6.12323e-17Y_m-Xf-0.13-Yf-0.17-Zf0m-Xf0-Yf0.17-Zf1.49m_+*f1Y*f0Z+*f-0Y*f1Zm-Xf0-Yf-0.17-Zf-1.49m+f0.13/*-Xf0.13f2.2+*f0-Zf1.49*f1-f3.69Z+f0.17/*-Yf0.17f2.2+*f0-Zf1.49*f1-f3.69Z_am__f1-r+q-Xf0.13q-Yf0.17f0.26a-f1.49Z-Zf3.69m-Xf0.13-Yf0.17-Zf0m+*f-1X*f1.22465e-16Y+*f-1.22465e-16X*f-1Y_m-Xf-0.13-Yf-0.17-Zf0m-Xf0-Yf0.17-Zf1.49m_+*f1Y*f0Z+*f-0Y*f1Zm-Xf0-Yf-0.17-Zf-1.49m+f0.13/*-Xf0.13f2.2+*f0-Zf1.49*f1-f3.69Z+f0.17/*-Yf0.17f2.2+*f0-Zf1.49*f1-f3.69Z_am__f1-r+q-Xf0.13q-Yf0.17f0.26a-f1.49Z-Zf3.69m-Xf0.13-Yf0.17-Zf0m+*f-1.83697e-16X*f-1Y+*f1X*f-1.83697e-16Y_m-Xf-0.13-Yf-0.17-Zf0m-Xf0-Yf0.17-Zf1.49m_+*f1Y*f0Z+*f-0Y*f1Zm-Xf0-Yf-0.17-Zf-1.49m+f0.13/*-Xf0.13f2.2+*f0-Zf1.49*f1-f3.69Z+f0.17/*-Yf0.17f2.2+*f0-Zf1.49*f1-f3.69Z_am__f1-r+q-Xf0.13q-Yf0.17f0.26a-f1.49Z-Zf3.69',float('-0.535000'),float('-0.495000'),float('0.050000'),float('0.795000'),float('0.835000'),float('5.090000'))",
-                    "name": "s",
-                    "type": "_fabtypes.Shape",
-                    "uid": 10
-                }
-            ],
-            "inspector": [
-                754.08506295914594,
-                1247.185096471482
-            ],
-            "name": "s2",
             "script": [
                 "import fab",
                 "",
@@ -339,12 +182,158 @@
                 "# output",
                 "output('s', s1)"
             ],
+            "uid": 7
+        },
+        {
+            "datums": [
+                {
+                    "expr": "180",
+                    "name": "theta",
+                    "type": "float",
+                    "uid": 6
+                },
+                {
+                    "expr": "90",
+                    "name": "phi",
+                    "type": "float",
+                    "uid": 9
+                },
+                {
+                    "expr": "\u0011[__2.__3]",
+                    "name": "r",
+                    "type": "float",
+                    "uid": 0
+                },
+                {
+                    "expr": "\u0012-1.14",
+                    "name": "x",
+                    "type": "float",
+                    "uid": 1
+                },
+                {
+                    "expr": "\u00121.3960973510279825e-16",
+                    "name": "y",
+                    "type": "float",
+                    "uid": 2
+                },
+                {
+                    "expr": "\u00126.980486755139913e-17",
+                    "name": "z",
+                    "type": "float",
+                    "uid": 3
+                }
+            ],
+            "inspector": [
+                737.91784874562666,
+                801.43190458445224
+            ],
+            "name": "coords",
+            "script": [
+                "import fab",
+                "import math",
+                "",
+                "title('coordinates (deg)')",
+                "input('theta', float)",
+                "input('phi', float)",
+                "input('r', float)",
+                "",
+                "x = r * math.cos(math.radians(theta)) * math.sin(math.radians(phi))",
+                "y = r * math.sin(math.radians(theta)) * math.sin(math.radians(phi))",
+                "z = r * math.cos(math.radians(phi))",
+                "",
+                "output('x', x)",
+                "output('y', y)",
+                "output('z', z)",
+                ""
+            ],
+            "uid": 0
+        },
+        {
+            "datums": [
+                {
+                    "expr": "0.0",
+                    "name": "_x",
+                    "type": "float",
+                    "uid": 0
+                },
+                {
+                    "expr": "0.0",
+                    "name": "y",
+                    "type": "float",
+                    "uid": 1
+                },
+                {
+                    "expr": "0.0",
+                    "name": "z",
+                    "type": "float",
+                    "uid": 2
+                },
+                {
+                    "expr": "coords.theta",
+                    "name": "a",
+                    "type": "float",
+                    "uid": 3
+                },
+                {
+                    "expr": "\u0011[__7.__8]",
+                    "name": "shape",
+                    "type": "_fabtypes.Shape",
+                    "uid": 4
+                },
+                {
+                    "expr": "\u0012fab.types.Shape('m-Xf0-Yf0-Zf0m_+*f-1Y*f1.22465e-16Z+*f-1.22465e-16Y*f-1Zm-Xf0-Yf-0-Zf-0aam+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.64X-Xf0.64a-f-0.64Y-Yf0.64a-f0Z-Zf3.76nm+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.32X-Xf0.32a-f-0.32Y-Yf0.32a-f0Z-Zf3.76niiim-Xf0-Yf0-Zf0m+*f1X*f0Y+*f-0X*f1Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f6.12323e-17X*f1Y+*f-1X*f6.12323e-17Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1X*f1.22465e-16Y+*f-1.22465e-16X*f-1Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1.83697e-16X*f-1Y+*f1X*f-1.83697e-16Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37',float('-0.640000'),float('-0.640000'),float('-3.760000'),float('0.640000'),float('0.640000'),float('0.000000'))",
+                    "name": "rotated",
+                    "type": "_fabtypes.Shape",
+                    "uid": 5
+                }
+            ],
+            "inspector": [
+                739.07264976087811,
+                1097.0609644888036
+            ],
+            "name": "r0",
+            "script": [
+                "import fab",
+                "import math",
+                "",
+                "title('Rotate (X)')",
+                "",
+                "input('_x', float)",
+                "input('y', float)",
+                "input('z', float)",
+                "input('a', float)",
+                "",
+                "input('shape', fab.types.Shape)",
+                "output('rotated', fab.shapes.rotate_x(shape, a, y, z))",
+                "",
+                "# UI",
+                "rad = math.radians(a)",
+                "sb.ui.wireframe([(_x, y + math.cos(rad), z + math.sin(rad)),",
+                "                  (_x, y, z),",
+                "                  (_x, y + 1, z)], color=sb.color.teal)",
+                "",
+                "# Draw a semi-circular arc showing the rotation",
+                "if int(a) % 360 != 0:",
+                "    sb.ui.wireframe([",
+                "        (_x, y + math.cos(math.radians(a_)) * 0.3,",
+                "             z + math.sin(math.radians(a_)) * 0.3)",
+                "        for a_ in range(int(a) % 360)], color=sb.color.teal)",
+                "",
+                "sb.ui.point(_x, y, z, color=sb.color.teal)",
+                "",
+                "def drag_pt(this, x, y, z):",
+                "    this.a = math.degrees(math.atan2(z - this.z, y - this.y))",
+                "sb.ui.point(_x, y + math.cos(rad), z + math.sin(rad),",
+                "             color=sb.color.teal, drag=drag_pt, relative=False)",
+                "",
+                ""
+            ],
             "uid": 1
         },
         {
             "datums": [
                 {
-                    "expr": "\u0011[__1.__2]",
+                    "expr": "0.0",
                     "name": "x",
                     "type": "float",
                     "uid": 0
@@ -356,35 +345,35 @@
                     "uid": 1
                 },
                 {
-                    "expr": "\u0011[__1.__4]",
+                    "expr": "0.0",
                     "name": "z",
                     "type": "float",
                     "uid": 2
                 },
                 {
-                    "expr": "63.2",
+                    "expr": "coords.phi",
                     "name": "a",
                     "type": "float",
                     "uid": 3
                 },
                 {
-                    "expr": "\u0011[__1.__10]",
+                    "expr": "\u0011[__1.__5]",
                     "name": "shape",
                     "type": "_fabtypes.Shape",
                     "uid": 4
                 },
                 {
-                    "expr": "\u0012fab.types.Shape('m-Xf0.13-Yf0-Zf0.05m+*f0.450878X*f0.892586ZY+*f-0.892586X*f0.450878Zm-Xf-0.13-Yf0-Zf-0.05aam+f0.13/*-Xf0.13f5.04+*f0-Zf0.05*f1-f5.09Z+f0.17/*-Yf0.17f5.04+*f0-Zf0.05*f1-f5.09Z_am__f1aa-f-0.535X-Xf0.795a-f-0.495Y-Yf0.835a-f0.05Z-Zf5.09nm+f0.13/*-Xf0.13f5.04+*f0-Zf0.05*f1-f5.09Z+f0.17/*-Yf0.17f5.04+*f0-Zf0.05*f1-f5.09Z_am__f1aa-f-0.2025X-Xf0.4625a-f-0.1625Y-Yf0.5025a-f0.05Z-Zf5.09niiim-Xf0.13-Yf0.17-Zf0m+*f1X*f0Y+*f-0X*f1Y_m-Xf-0.13-Yf-0.17-Zf0m-Xf0-Yf0.17-Zf1.49m_+*f1Y*f0Z+*f-0Y*f1Zm-Xf0-Yf-0.17-Zf-1.49m+f0.13/*-Xf0.13f2.2+*f0-Zf1.49*f1-f3.69Z+f0.17/*-Yf0.17f2.2+*f0-Zf1.49*f1-f3.69Z_am__f1-r+q-Xf0.13q-Yf0.17f0.26a-f1.49Z-Zf3.69m-Xf0.13-Yf0.17-Zf0m+*f6.12323e-17X*f1Y+*f-1X*f6.12323e-17Y_m-Xf-0.13-Yf-0.17-Zf0m-Xf0-Yf0.17-Zf1.49m_+*f1Y*f0Z+*f-0Y*f1Zm-Xf0-Yf-0.17-Zf-1.49m+f0.13/*-Xf0.13f2.2+*f0-Zf1.49*f1-f3.69Z+f0.17/*-Yf0.17f2.2+*f0-Zf1.49*f1-f3.69Z_am__f1-r+q-Xf0.13q-Yf0.17f0.26a-f1.49Z-Zf3.69m-Xf0.13-Yf0.17-Zf0m+*f-1X*f1.22465e-16Y+*f-1.22465e-16X*f-1Y_m-Xf-0.13-Yf-0.17-Zf0m-Xf0-Yf0.17-Zf1.49m_+*f1Y*f0Z+*f-0Y*f1Zm-Xf0-Yf-0.17-Zf-1.49m+f0.13/*-Xf0.13f2.2+*f0-Zf1.49*f1-f3.69Z+f0.17/*-Yf0.17f2.2+*f0-Zf1.49*f1-f3.69Z_am__f1-r+q-Xf0.13q-Yf0.17f0.26a-f1.49Z-Zf3.69m-Xf0.13-Yf0.17-Zf0m+*f-1.83697e-16X*f-1Y+*f1X*f-1.83697e-16Y_m-Xf-0.13-Yf-0.17-Zf0m-Xf0-Yf0.17-Zf1.49m_+*f1Y*f0Z+*f-0Y*f1Zm-Xf0-Yf-0.17-Zf-1.49m+f0.13/*-Xf0.13f2.2+*f0-Zf1.49*f1-f3.69Z+f0.17/*-Yf0.17f2.2+*f0-Zf1.49*f1-f3.69Z_am__f1-r+q-Xf0.13q-Yf0.17f0.26a-f1.49Z-Zf3.69',float('-4.668467'),float('-0.495000'),float('-0.543570'),float('0.429834'),float('0.835000'),float('2.915995'))",
+                    "expr": "\u0012fab.types.Shape('m-Xf0-Yf0-Zf0m+*f6.12323e-17X*f1ZY+*f-1X*f6.12323e-17Zm-Xf-0-Yf0-Zf-0m-Xf0-Yf0-Zf0m_+*f-1Y*f1.22465e-16Z+*f-1.22465e-16Y*f-1Zm-Xf0-Yf-0-Zf-0aam+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.64X-Xf0.64a-f-0.64Y-Yf0.64a-f0Z-Zf3.76nm+f0/*-Xf0f3.76+*f0-Zf0*f1-f3.76Z+f0/*-Yf0f3.76+*f0-Zf0*f1-f3.76Z_am__f1aa-f-0.32X-Xf0.32a-f-0.32Y-Yf0.32a-f0Z-Zf3.76niiim-Xf0-Yf0-Zf0m+*f1X*f0Y+*f-0X*f1Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f6.12323e-17X*f1Y+*f-1X*f6.12323e-17Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1X*f1.22465e-16Y+*f-1.22465e-16X*f-1Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37m-Xf0-Yf0-Zf0m+*f-1.83697e-16X*f-1Y+*f1X*f-1.83697e-16Y_m-Xf-0-Yf-0-Zf0m-Xf0-Yf0-Zf1.29m_+*f6.12323e-17Y*f1Z+*f-1Y*f6.12323e-17Zm-Xf0-Yf-0-Zf-1.29m+f0/*-Xf0f3.08+*f0-Zf1.29*f1-f4.37Z+f0/*-Yf0f3.08+*f0-Zf1.29*f1-f4.37Z_am__f1-r+qXqYf0.32a-f1.29Z-Zf4.37',float('-0.000000'),float('-0.640000'),float('-0.640000'),float('3.760000'),float('0.640000'),float('0.640000'))",
                     "name": "rotated",
                     "type": "_fabtypes.Shape",
                     "uid": 5
                 }
             ],
             "inspector": [
-                1060.1073320007597,
-                1256.4235045934929
+                1046.6943898187299,
+                1093.3598511049613
             ],
-            "name": "r0",
+            "name": "r1",
             "script": [
                 "import fab",
                 "import math",
