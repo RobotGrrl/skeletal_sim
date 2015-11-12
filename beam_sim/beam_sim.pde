@@ -3,6 +3,10 @@
 
 */
 
+import traer.physics.*;
+
+ParticleSystem physics;
+
 JSONObject json;
 
 // inputs on dim node
@@ -20,6 +24,14 @@ static float OFF_X = 80.0;
 static float OFF_Y = 70.0;
 static int NUM_CUBE_POINTS = 4;
 static int NUM_CYL_POINTS = 6;
+
+Particle[] particles_left_cube = new Particle[NUM_CUBE_POINTS];
+Particle[] anchors_left_cube = new Particle[NUM_CUBE_POINTS];
+Particle[] particles_right_cube = new Particle[NUM_CUBE_POINTS];
+Particle[] anchors_right_cube = new Particle[NUM_CUBE_POINTS];
+Particle[] particles_cyl = new Particle[NUM_CYL_POINTS];
+Particle[] anchors_cyl = new Particle[NUM_CYL_POINTS];
+Particle mouse;
 
 float left_cube_points[][] = new float[NUM_CUBE_POINTS][3];
 float cyl_points[][] = new float[NUM_CYL_POINTS][3];
@@ -55,6 +67,8 @@ void makePoints() {
       if(j == 0) left_cube_points[i][j] += OFF_X;
       if(j == 2) left_cube_points[i][j] += OFF_Y;
     }
+    particles_left_cube[i] = physics.makeParticle(1.0, left_cube_points[i][0], left_cube_points[i][2], 0.0);
+    anchors_left_cube[i] = physics.makeParticle(1.0, left_cube_points[i][0], left_cube_points[i][2], 0.0);
   }
   
   
@@ -125,14 +139,40 @@ void makePoints() {
 }
 
 
-
 void setup() {
   size(800, 600);
   smooth();
+  
+  physics = new ParticleSystem(0.0, 0.0);
+  
+  mouse = physics.makeParticle();
+  mouse.makeFixed();
+  
   readAntimonyFile();
+  
+  // make all of the particles attracted to the mouse particle
+  // and anchor the first point (corner)
+  for(int i=1; i<NUM_CUBE_POINTS; i++) {
+    physics.makeAttraction(mouse, particles_left_cube[i], 1000, 15);
+  }
+  
+  // make all particles repel each other a little bit
+  for(int i=1; i<NUM_CUBE_POINTS; i++) {
+    physics.makeAttraction(particles_left_cube[i-1], particles_left_cube[i], -10000, 10);
+  }
+  
+  // make the particles attracted to their anchors
+  for(int i=0; i<NUM_CUBE_POINTS; i++) {
+    physics.makeAttraction(particles_left_cube[i], anchors_left_cube[i], 10000, 100);
+    anchors_left_cube[i].makeFixed();
+  }
+  
 }
 
 void draw() {
+  
+  physics.tick();
+  
   background(0);
   
   fill(255);
@@ -145,6 +185,28 @@ void draw() {
   for(int i=0; i<NUM_CYL_POINTS; i++) {
     ellipse(cyl_points[i][0], cyl_points[i][2], 15, 15);
   }
+  
+  // mouse particle
+  fill(255);
+  mouse.position().set(mouseX, mouseY, 0);
+  ellipse(mouse.position().x(), mouse.position().y(), 15, 15);
+  
+  // anchors
+  for(int i=0; i<NUM_CUBE_POINTS; i++) {
+    ellipse( particles_left_cube[i].position().x(), particles_left_cube[i].position().y(), 15, 15 );
+  }
+  
+  fill(0, 0, 255);
+  for(int i=0; i<NUM_CUBE_POINTS; i++) {
+    ellipse( anchors_left_cube[i].position().x(), anchors_left_cube[i].position().y(), 15, 15 );
+  }
+  
+  // handle the boundaries
+  for(int i=0; i<NUM_CUBE_POINTS; i++) {
+    handleBoundaryCollisions(particles_left_cube[i]);
+  }
+  handleBoundaryCollisions(mouse);
+  
   
 }
 
@@ -217,6 +279,27 @@ void loadDimNode(JSONArray datums) {
     
   }
   
+}
+
+
+void keyPressed() {
+ if(key == 'r'  ) {
+   println("reloading the antimony file");
+   readAntimonyFile();
+ } 
+}
+
+void handleBoundaryCollisions( Particle p ) {
+  if ( p.position().x() < 0 || p.position().x() > width ) {
+    p.velocity().set(-0.9*p.velocity().x(), p.velocity().y(), 0);
+    //p.setVelocity( -0.9*p.velocity().x(), p.velocity().y(), 0 );
+  }
+  if ( p.position().y() < 0 || p.position().y() > height ) {
+    p.velocity().set(p.velocity().x(), -0.9*p.velocity().y(), 0);
+    //p.setVelocity( p.velocity().x(), -0.9*p.velocity().y(), 0 );
+  }
+  //p.moveTo( constrain( p.position().x(), 0, width ), constrain( p.position().y(), 0, height ), 0 ); 
+  p.position().set( constrain( p.position().x(), 0, width ), constrain( p.position().y(), 0, height ), 0 ); 
 }
 
 
