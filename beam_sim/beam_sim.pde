@@ -6,7 +6,7 @@
 import traer.physics.*;
 
 ParticleSystem physics;
-
+PFont f;
 JSONObject json;
 
 // inputs on dim node
@@ -143,6 +143,12 @@ void setup() {
   size(800, 600);
   smooth();
   
+  // making the font
+  printArray(PFont.list());
+  f = createFont("SourceCodePro-Regular.ttf", 24);
+  textFont(f);
+  textAlign(CENTER, CENTER);
+  
   physics = new ParticleSystem(0.0, 0.0);
   
   mouse = physics.makeParticle();
@@ -177,11 +183,13 @@ void draw() {
   
   fill(255);
   
+  // drawing the cube points
   for(int i=0; i<NUM_CUBE_POINTS; i++) {
     ellipse(left_cube_points[i][0], left_cube_points[i][2], 15, 15);
     ellipse(right_cube_points[i][0], right_cube_points[i][2], 15, 15);
   }
   
+  // drawing the cyl points
   for(int i=0; i<NUM_CYL_POINTS; i++) {
     ellipse(cyl_points[i][0], cyl_points[i][2], 15, 15);
   }
@@ -191,11 +199,16 @@ void draw() {
   mouse.position().set(mouseX, mouseY, 0);
   ellipse(mouse.position().x(), mouse.position().y(), 15, 15);
   
-  // anchors
+  // particles
   for(int i=0; i<NUM_CUBE_POINTS; i++) {
+    fill(255, 255, 255);
+    String s = ("" + i);
+    text(s, particles_left_cube[i].position().x()+25, particles_left_cube[i].position().y());
+    fill(0, 255, 0);
     ellipse( particles_left_cube[i].position().x(), particles_left_cube[i].position().y(), 15, 15 );
   }
   
+  // anchors
   fill(0, 0, 255);
   for(int i=0; i<NUM_CUBE_POINTS; i++) {
     ellipse( anchors_left_cube[i].position().x(), anchors_left_cube[i].position().y(), 15, 15 );
