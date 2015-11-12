@@ -27,6 +27,9 @@ static int NUM_CYL_POINTS = 6;
 
 Particle[] particles_left_cube = new Particle[NUM_CUBE_POINTS];
 Particle[] anchors_left_cube = new Particle[NUM_CUBE_POINTS];
+Spring[] springs_left_cube_type1 = new Spring[NUM_CUBE_POINTS];
+Spring[] springs_left_cube_type2 = new Spring[NUM_CUBE_POINTS+2];
+
 Particle[] particles_right_cube = new Particle[NUM_CUBE_POINTS];
 Particle[] anchors_right_cube = new Particle[NUM_CUBE_POINTS];
 Particle[] particles_cyl = new Particle[NUM_CYL_POINTS];
@@ -36,6 +39,24 @@ Particle mouse;
 float left_cube_points[][] = new float[NUM_CUBE_POINTS][3];
 float cyl_points[][] = new float[NUM_CYL_POINTS][3];
 float right_cube_points[][] = new float[NUM_CUBE_POINTS][3];
+
+// just the outer perimeter
+int left_cube_links_type1[][] = { 
+  { 0, 1 },
+  { 1, 2 },
+  { 2, 3 },
+  { 3, 0 }
+}; 
+                
+// with the internal crosses
+int left_cube_links_type2[][] = { 
+  { 0, 1 },
+  { 1, 2 },
+  { 2, 3 },
+  { 3, 0 },
+  { 1, 3 },
+  { 0, 2 }
+}; 
 
 
 void makePoints() {
@@ -156,6 +177,13 @@ void setup() {
   
   readAntimonyFile();
   
+  // linking particles together with springs - distance is 
+  // between the two points
+  for(int i=0; i<NUM_CUBE_POINTS; i++) {
+    float distance = sqrt( pow( abs( left_cube_points[ left_cube_links_type1[i][0] ][0] - left_cube_points[ left_cube_links_type1[i][1] ][0]),2 ) + pow( abs( left_cube_points[ left_cube_links_type1[i][0] ][2] - left_cube_points[ left_cube_links_type1[i][1] ][2] ),2 ) );
+    springs_left_cube_type1[i] = physics.makeSpring(particles_left_cube[ left_cube_links_type1[i][0] ], particles_left_cube[ left_cube_links_type1[i][1] ], 0.8, 1, distance);
+  }
+  
   // make all of the particles attracted to the mouse particle
   // and anchor the first point (corner)
   for(int i=1; i<NUM_CUBE_POINTS; i++) {
@@ -181,15 +209,22 @@ void draw() {
   
   background(0);
   
-  fill(255);
+  // drawing the springs
+  // todo: how to colour a line?
+  for(int i=0; i<NUM_CUBE_POINTS; i++) {
+    fill(255);
+    line( particles_left_cube[ left_cube_links_type1[i][0] ].position().x(), particles_left_cube[ left_cube_links_type1[i][0] ].position().y(), particles_left_cube[ left_cube_links_type1[i][1] ].position().x(), particles_left_cube[ left_cube_links_type1[i][1] ].position().y());
+  }
   
   // drawing the cube points
+  fill(255);
   for(int i=0; i<NUM_CUBE_POINTS; i++) {
     ellipse(left_cube_points[i][0], left_cube_points[i][2], 15, 15);
     ellipse(right_cube_points[i][0], right_cube_points[i][2], 15, 15);
   }
   
   // drawing the cyl points
+  fill(255);
   for(int i=0; i<NUM_CYL_POINTS; i++) {
     ellipse(cyl_points[i][0], cyl_points[i][2], 15, 15);
   }
