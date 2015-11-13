@@ -32,6 +32,9 @@ Spring[] springs_left_cube_type2 = new Spring[NUM_CUBE_POINTS+2];
 
 Particle[] particles_right_cube = new Particle[NUM_CUBE_POINTS];
 Particle[] anchors_right_cube = new Particle[NUM_CUBE_POINTS];
+Spring[] springs_right_cube_type1 = new Spring[NUM_CUBE_POINTS];
+Spring[] springs_right_cube_type2 = new Spring[NUM_CUBE_POINTS+2];
+
 Particle[] particles_cyl = new Particle[NUM_CYL_POINTS];
 Particle[] anchors_cyl = new Particle[NUM_CYL_POINTS];
 Particle mouse;
@@ -50,6 +53,24 @@ int left_cube_links_type1[][] = {
                 
 // with the internal crosses
 int left_cube_links_type2[][] = { 
+  { 0, 1 },
+  { 1, 2 },
+  { 2, 3 },
+  { 3, 0 },
+  { 1, 3 },
+  { 0, 2 }
+}; 
+
+// just the outer perimeter
+int right_cube_links_type1[][] = { 
+  { 0, 1 },
+  { 1, 2 },
+  { 2, 3 },
+  { 3, 0 }
+}; 
+                
+// with the internal crosses
+int right_cube_links_type2[][] = { 
   { 0, 1 },
   { 1, 2 },
   { 2, 3 },
@@ -156,6 +177,8 @@ void makePoints() {
       if(j == 0) right_cube_points[i][j] += OFF_X;
       if(j == 2) right_cube_points[i][j] += OFF_Y;
     }
+    particles_right_cube[i] = physics.makeParticle(1.0, right_cube_points[i][0], right_cube_points[i][2], 0.0);
+    anchors_right_cube[i] = physics.makeParticle(1.0, right_cube_points[i][0], right_cube_points[i][2], 0.0);
   }
   
   
@@ -184,17 +207,23 @@ void setup() {
     
     // linking particles together with springs - distance is 
     // between the two points
+    float distance;
     for(int i=0; i<NUM_CUBE_POINTS; i++) {
-      float distance = sqrt( pow( abs( left_cube_points[ left_cube_links_type1[i][0] ][0] - left_cube_points[ left_cube_links_type1[i][1] ][0]),2 ) + pow( abs( left_cube_points[ left_cube_links_type1[i][0] ][2] - left_cube_points[ left_cube_links_type1[i][1] ][2] ),2 ) );
+      distance = sqrt( pow( abs( left_cube_points[ left_cube_links_type1[i][0] ][0] - left_cube_points[ left_cube_links_type1[i][1] ][0]),2 ) + pow( abs( left_cube_points[ left_cube_links_type1[i][0] ][2] - left_cube_points[ left_cube_links_type1[i][1] ][2] ),2 ) );
       springs_left_cube_type1[i] = physics.makeSpring(particles_left_cube[ left_cube_links_type1[i][0] ], particles_left_cube[ left_cube_links_type1[i][1] ], 0.8, 1, distance);
+      distance = sqrt( pow( abs( right_cube_points[ right_cube_links_type1[i][0] ][0] - right_cube_points[ right_cube_links_type1[i][1] ][0]),2 ) + pow( abs( right_cube_points[ right_cube_links_type1[i][0] ][2] - right_cube_points[ right_cube_links_type1[i][1] ][2] ),2 ) );
+      springs_right_cube_type1[i] = physics.makeSpring(particles_right_cube[ right_cube_links_type1[i][0] ], particles_right_cube[ right_cube_links_type1[i][1] ], 0.8, 1, distance);
     }
   
   } else if(link_type == 2) {
   
     // link type 2
+    float distance;
     for(int i=0; i<NUM_CUBE_POINTS+2; i++) {
-      float distance = sqrt( pow( abs( left_cube_points[ left_cube_links_type2[i][0] ][0] - left_cube_points[ left_cube_links_type2[i][1] ][0]),2 ) + pow( abs( left_cube_points[ left_cube_links_type2[i][0] ][2] - left_cube_points[ left_cube_links_type2[i][1] ][2] ),2 ) );
+      distance = sqrt( pow( abs( left_cube_points[ left_cube_links_type2[i][0] ][0] - left_cube_points[ left_cube_links_type2[i][1] ][0]),2 ) + pow( abs( left_cube_points[ left_cube_links_type2[i][0] ][2] - left_cube_points[ left_cube_links_type2[i][1] ][2] ),2 ) );
       springs_left_cube_type2[i] = physics.makeSpring(particles_left_cube[ left_cube_links_type2[i][0] ], particles_left_cube[ left_cube_links_type2[i][1] ], 0.8, 1, distance);
+      distance = sqrt( pow( abs( right_cube_points[ right_cube_links_type2[i][0] ][0] - right_cube_points[ right_cube_links_type2[i][1] ][0]),2 ) + pow( abs( right_cube_points[ right_cube_links_type2[i][0] ][2] - right_cube_points[ right_cube_links_type2[i][1] ][2] ),2 ) );
+      springs_right_cube_type2[i] = physics.makeSpring(particles_right_cube[ right_cube_links_type2[i][0] ], particles_right_cube[ right_cube_links_type2[i][1] ], 0.8, 1, distance);
     }
   
   }
@@ -203,17 +232,21 @@ void setup() {
   // and anchor the first point (corner)
   for(int i=1; i<NUM_CUBE_POINTS; i++) {
     physics.makeAttraction(mouse, particles_left_cube[i], 1000, 15);
+    physics.makeAttraction(mouse, particles_right_cube[i], 1000, 15);
   }
   
   // make all particles repel each other a little bit
   for(int i=1; i<NUM_CUBE_POINTS; i++) {
     physics.makeAttraction(particles_left_cube[i-1], particles_left_cube[i], -10000, 10);
+    physics.makeAttraction(particles_right_cube[i-1], particles_right_cube[i], -10000, 10);
   }
   
   // make the particles attracted to their anchors
   for(int i=0; i<NUM_CUBE_POINTS; i++) {
     physics.makeAttraction(particles_left_cube[i], anchors_left_cube[i], 10000, 100);
     anchors_left_cube[i].makeFixed();
+    physics.makeAttraction(particles_right_cube[i], anchors_right_cube[i], 10000, 100);
+    anchors_right_cube[i].makeFixed();
   }
   
 }
@@ -230,6 +263,7 @@ void draw() {
     stroke(255);
     for(int i=0; i<NUM_CUBE_POINTS; i++) {
       line( particles_left_cube[ left_cube_links_type1[i][0] ].position().x(), particles_left_cube[ left_cube_links_type1[i][0] ].position().y(), particles_left_cube[ left_cube_links_type1[i][1] ].position().x(), particles_left_cube[ left_cube_links_type1[i][1] ].position().y());
+      line( particles_right_cube[ right_cube_links_type1[i][0] ].position().x(), particles_right_cube[ right_cube_links_type1[i][0] ].position().y(), particles_right_cube[ right_cube_links_type1[i][1] ].position().x(), particles_right_cube[ right_cube_links_type1[i][1] ].position().y());
     }
     noStroke();
   
@@ -239,6 +273,7 @@ void draw() {
     stroke(255);
     for(int i=0; i<NUM_CUBE_POINTS+2; i++) {
       line( particles_left_cube[ left_cube_links_type2[i][0] ].position().x(), particles_left_cube[ left_cube_links_type2[i][0] ].position().y(), particles_left_cube[ left_cube_links_type2[i][1] ].position().x(), particles_left_cube[ left_cube_links_type2[i][1] ].position().y());
+      line( particles_right_cube[ right_cube_links_type2[i][0] ].position().x(), particles_right_cube[ right_cube_links_type2[i][0] ].position().y(), particles_right_cube[ right_cube_links_type2[i][1] ].position().x(), particles_right_cube[ right_cube_links_type2[i][1] ].position().y());
     }
     noStroke();
   
@@ -267,19 +302,23 @@ void draw() {
     fill(255, 255, 255);
     String s = ("" + i);
     text(s, particles_left_cube[i].position().x()+25, particles_left_cube[i].position().y());
+    text(s, particles_right_cube[i].position().x()+25, particles_right_cube[i].position().y());
     fill(0, 255, 0);
     ellipse( particles_left_cube[i].position().x(), particles_left_cube[i].position().y(), 15, 15 );
+    ellipse( particles_right_cube[i].position().x(), particles_right_cube[i].position().y(), 15, 15 );
   }
   
   // anchors
   fill(0, 0, 255);
   for(int i=0; i<NUM_CUBE_POINTS; i++) {
     ellipse( anchors_left_cube[i].position().x(), anchors_left_cube[i].position().y(), 15, 15 );
+    ellipse( anchors_right_cube[i].position().x(), anchors_right_cube[i].position().y(), 15, 15 );
   }
   
   // handle the boundaries
   for(int i=0; i<NUM_CUBE_POINTS; i++) {
     handleBoundaryCollisions(particles_left_cube[i]);
+    handleBoundaryCollisions(particles_right_cube[i]);
   }
   handleBoundaryCollisions(mouse);
   
