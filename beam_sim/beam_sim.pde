@@ -58,6 +58,8 @@ int left_cube_links_type2[][] = {
   { 0, 2 }
 }; 
 
+int link_type = 1;
+
 
 void makePoints() {
   
@@ -163,6 +165,7 @@ void makePoints() {
 void setup() {
   size(800, 600);
   smooth();
+  frameRate(30);
   
   // making the font
   printArray(PFont.list());
@@ -177,11 +180,23 @@ void setup() {
   
   readAntimonyFile();
   
-  // linking particles together with springs - distance is 
-  // between the two points
-  for(int i=0; i<NUM_CUBE_POINTS; i++) {
-    float distance = sqrt( pow( abs( left_cube_points[ left_cube_links_type1[i][0] ][0] - left_cube_points[ left_cube_links_type1[i][1] ][0]),2 ) + pow( abs( left_cube_points[ left_cube_links_type1[i][0] ][2] - left_cube_points[ left_cube_links_type1[i][1] ][2] ),2 ) );
-    springs_left_cube_type1[i] = physics.makeSpring(particles_left_cube[ left_cube_links_type1[i][0] ], particles_left_cube[ left_cube_links_type1[i][1] ], 0.8, 1, distance);
+  if(link_type == 1) {
+    
+    // linking particles together with springs - distance is 
+    // between the two points
+    for(int i=0; i<NUM_CUBE_POINTS; i++) {
+      float distance = sqrt( pow( abs( left_cube_points[ left_cube_links_type1[i][0] ][0] - left_cube_points[ left_cube_links_type1[i][1] ][0]),2 ) + pow( abs( left_cube_points[ left_cube_links_type1[i][0] ][2] - left_cube_points[ left_cube_links_type1[i][1] ][2] ),2 ) );
+      springs_left_cube_type1[i] = physics.makeSpring(particles_left_cube[ left_cube_links_type1[i][0] ], particles_left_cube[ left_cube_links_type1[i][1] ], 0.8, 1, distance);
+    }
+  
+  } else if(link_type == 2) {
+  
+    // link type 2
+    for(int i=0; i<NUM_CUBE_POINTS+2; i++) {
+      float distance = sqrt( pow( abs( left_cube_points[ left_cube_links_type2[i][0] ][0] - left_cube_points[ left_cube_links_type2[i][1] ][0]),2 ) + pow( abs( left_cube_points[ left_cube_links_type2[i][0] ][2] - left_cube_points[ left_cube_links_type2[i][1] ][2] ),2 ) );
+      springs_left_cube_type2[i] = physics.makeSpring(particles_left_cube[ left_cube_links_type2[i][0] ], particles_left_cube[ left_cube_links_type2[i][1] ], 0.8, 1, distance);
+    }
+  
   }
   
   // make all of the particles attracted to the mouse particle
@@ -209,11 +224,24 @@ void draw() {
   
   background(0);
   
-  // drawing the springs
-  // todo: how to colour a line?
-  for(int i=0; i<NUM_CUBE_POINTS; i++) {
-    fill(255);
-    line( particles_left_cube[ left_cube_links_type1[i][0] ].position().x(), particles_left_cube[ left_cube_links_type1[i][0] ].position().y(), particles_left_cube[ left_cube_links_type1[i][1] ].position().x(), particles_left_cube[ left_cube_links_type1[i][1] ].position().y());
+  if(link_type == 1) {
+  
+    // drawing the springs - link type 1
+    stroke(255);
+    for(int i=0; i<NUM_CUBE_POINTS; i++) {
+      line( particles_left_cube[ left_cube_links_type1[i][0] ].position().x(), particles_left_cube[ left_cube_links_type1[i][0] ].position().y(), particles_left_cube[ left_cube_links_type1[i][1] ].position().x(), particles_left_cube[ left_cube_links_type1[i][1] ].position().y());
+    }
+    noStroke();
+  
+  } else if(link_type == 2) {
+  
+    // drawing the springs - link type 2
+    stroke(255);
+    for(int i=0; i<NUM_CUBE_POINTS+2; i++) {
+      line( particles_left_cube[ left_cube_links_type2[i][0] ].position().x(), particles_left_cube[ left_cube_links_type2[i][0] ].position().y(), particles_left_cube[ left_cube_links_type2[i][1] ].position().x(), particles_left_cube[ left_cube_links_type2[i][1] ].position().y());
+    }
+    noStroke();
+  
   }
   
   // drawing the cube points
