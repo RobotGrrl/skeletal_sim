@@ -149,6 +149,8 @@ void makePoints() {
       if(j == 0) cyl_points[i][j] += OFF_X;
       if(j == 2) cyl_points[i][j] += OFF_Y;
     }
+    particles_cyl[i] = physics.makeParticle(1.0, cyl_points[i][0], cyl_points[i][2], 0.0);
+    anchors_cyl[i] = physics.makeParticle(1.0, cyl_points[i][0], cyl_points[i][2], 0.0);
   }
   
   
@@ -229,16 +231,27 @@ void setup() {
   }
   
   // make all of the particles attracted to the mouse particle
-  // and anchor the first point (corner)
   for(int i=1; i<NUM_CUBE_POINTS; i++) {
     physics.makeAttraction(mouse, particles_left_cube[i], 1000, 15);
     physics.makeAttraction(mouse, particles_right_cube[i], 1000, 15);
   }
+  // TODO: adjust which of the corners becomes fixed or not
+  particles_left_cube[0].makeFixed();
+  particles_right_cube[0].makeFixed();
+  
+  for(int i=1; i<NUM_CYL_POINTS; i++) {
+    physics.makeAttraction(mouse, particles_cyl[i], 1000, 15);
+  }
+  particles_cyl[0].makeFixed();
   
   // make all particles repel each other a little bit
   for(int i=1; i<NUM_CUBE_POINTS; i++) {
     physics.makeAttraction(particles_left_cube[i-1], particles_left_cube[i], -10000, 10);
     physics.makeAttraction(particles_right_cube[i-1], particles_right_cube[i], -10000, 10);
+  }
+  
+  for(int i=1; i<NUM_CYL_POINTS; i++) {
+    physics.makeAttraction(particles_cyl[i-1], particles_cyl[i], -10000, 10);
   }
   
   // make the particles attracted to their anchors
@@ -248,6 +261,12 @@ void setup() {
     physics.makeAttraction(particles_right_cube[i], anchors_right_cube[i], 10000, 100);
     anchors_right_cube[i].makeFixed();
   }
+  
+  for(int i=0; i<NUM_CYL_POINTS; i++) {
+    physics.makeAttraction(particles_cyl[i], anchors_cyl[i], 10000, 100);
+    anchors_cyl[i].makeFixed();
+  }
+  
   
 }
 
@@ -297,7 +316,7 @@ void draw() {
   mouse.position().set(mouseX, mouseY, 0);
   ellipse(mouse.position().x(), mouse.position().y(), 15, 15);
   
-  // particles
+  // cube particles
   for(int i=0; i<NUM_CUBE_POINTS; i++) {
     fill(255, 255, 255);
     String s = ("" + i);
@@ -308,17 +327,34 @@ void draw() {
     ellipse( particles_right_cube[i].position().x(), particles_right_cube[i].position().y(), 15, 15 );
   }
   
-  // anchors
+  // cyl particles
+  for(int i=0; i<NUM_CYL_POINTS; i++) {
+    fill(255, 255, 255);
+    String s = ("" + i);
+    text(s, particles_cyl[i].position().x()+25, particles_cyl[i].position().y());
+    fill(0, 255, 0);
+    ellipse( particles_cyl[i].position().x(), particles_cyl[i].position().y(), 15, 15 );
+  }
+  
+  // cube anchors
   fill(0, 0, 255);
   for(int i=0; i<NUM_CUBE_POINTS; i++) {
     ellipse( anchors_left_cube[i].position().x(), anchors_left_cube[i].position().y(), 15, 15 );
     ellipse( anchors_right_cube[i].position().x(), anchors_right_cube[i].position().y(), 15, 15 );
   }
   
+  for(int i=0; i<NUM_CYL_POINTS; i++) {
+    ellipse( anchors_cyl[i].position().x(), anchors_cyl[i].position().y(), 15, 15 );
+  }
+  
   // handle the boundaries
   for(int i=0; i<NUM_CUBE_POINTS; i++) {
     handleBoundaryCollisions(particles_left_cube[i]);
     handleBoundaryCollisions(particles_right_cube[i]);
+  }
+  
+  for(int i=0; i<NUM_CYL_POINTS; i++) {
+    handleBoundaryCollisions(particles_cyl[i]);
   }
   handleBoundaryCollisions(mouse);
   
