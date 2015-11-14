@@ -1,5 +1,23 @@
 /*
+Experimenting with skeleton-physics simulation on 
+a beam model made in Antimony 0.9
 
+link_type can be 1 for just the perimeter, or 2
+for internal crosses as well
+
+nothing_fixed can be true for making all the points
+floating near their anchors, or false for fixing
+some of the points
+
+this is all still experimental! it's fun to play
+around with it!
+
+---
+
+Erin RobotGrrl
+erin@robotgrrl.com
+Saturday, Nov. 14, 2015
+At the Hackaday Hardware Superconference!
 
 */
 
@@ -37,6 +55,9 @@ Spring[] springs_right_cube_type2 = new Spring[NUM_CUBE_POINTS+2];
 
 Particle[] particles_cyl = new Particle[NUM_CYL_POINTS];
 Particle[] anchors_cyl = new Particle[NUM_CYL_POINTS];
+Spring[] springs_cyl_type1 = new Spring[NUM_CYL_POINTS];
+Spring[] springs_cyl_type2 = new Spring[NUM_CYL_POINTS+4];
+
 Particle mouse;
 
 float left_cube_points[][] = new float[NUM_CUBE_POINTS][3];
@@ -79,7 +100,34 @@ int right_cube_links_type2[][] = {
   { 0, 2 }
 }; 
 
+// just the outer perimeter
+int cyl_links_type1[][] = {
+  {0, 1},
+  {1, 3},
+  {3, 5},
+  {5, 4},
+  {4, 2},
+  {2, 0}
+};
+
+// with internal crosses
+int cyl_links_type2[][] = {
+  {0, 1},
+  {1, 3},
+  {3, 5},
+  {5, 4},
+  {4, 2},
+  {2, 0},
+  {1, 2},
+  {0, 3},
+  {3, 4},
+  {5, 2}
+};
+
+
 int link_type = 1;
+
+boolean nothing_fixed = true;
 
 
 void makePoints() {
@@ -216,6 +264,11 @@ void setup() {
       distance = sqrt( pow( abs( right_cube_points[ right_cube_links_type1[i][0] ][0] - right_cube_points[ right_cube_links_type1[i][1] ][0]),2 ) + pow( abs( right_cube_points[ right_cube_links_type1[i][0] ][2] - right_cube_points[ right_cube_links_type1[i][1] ][2] ),2 ) );
       springs_right_cube_type1[i] = physics.makeSpring(particles_right_cube[ right_cube_links_type1[i][0] ], particles_right_cube[ right_cube_links_type1[i][1] ], 0.8, 1, distance);
     }
+    
+    for(int i=0; i<NUM_CYL_POINTS; i++) {
+      distance = sqrt( pow( abs( cyl_points[ cyl_links_type1[i][0] ][0] - cyl_points[ cyl_links_type1[i][1] ][0]),2 ) + pow( abs( cyl_points[ cyl_links_type1[i][0] ][2] - cyl_points[ cyl_links_type1[i][1] ][2] ),2 ) );
+      springs_cyl_type1[i] = physics.makeSpring(particles_cyl[ cyl_links_type1[i][0] ], particles_cyl[ cyl_links_type1[i][1] ], 0.8, 1, distance);
+    }
   
   } else if(link_type == 2) {
   
@@ -227,6 +280,11 @@ void setup() {
       distance = sqrt( pow( abs( right_cube_points[ right_cube_links_type2[i][0] ][0] - right_cube_points[ right_cube_links_type2[i][1] ][0]),2 ) + pow( abs( right_cube_points[ right_cube_links_type2[i][0] ][2] - right_cube_points[ right_cube_links_type2[i][1] ][2] ),2 ) );
       springs_right_cube_type2[i] = physics.makeSpring(particles_right_cube[ right_cube_links_type2[i][0] ], particles_right_cube[ right_cube_links_type2[i][1] ], 0.8, 1, distance);
     }
+    
+    for(int i=0; i<NUM_CYL_POINTS+4; i++) {
+      distance = sqrt( pow( abs( cyl_points[ cyl_links_type2[i][0] ][0] - cyl_points[ cyl_links_type2[i][1] ][0]),2 ) + pow( abs( cyl_points[ cyl_links_type2[i][0] ][2] - cyl_points[ cyl_links_type2[i][1] ][2] ),2 ) );
+      springs_cyl_type2[i] = physics.makeSpring(particles_cyl[ cyl_links_type2[i][0] ], particles_cyl[ cyl_links_type2[i][1] ], 0.8, 1, distance);
+    }
   
   }
   
@@ -235,14 +293,21 @@ void setup() {
     physics.makeAttraction(mouse, particles_left_cube[i], 1000, 15);
     physics.makeAttraction(mouse, particles_right_cube[i], 1000, 15);
   }
-  // TODO: adjust which of the corners becomes fixed or not
-  particles_left_cube[0].makeFixed();
-  particles_right_cube[0].makeFixed();
+  if(!nothing_fixed) {
+    particles_left_cube[2].makeFixed();
+    particles_right_cube[2].makeFixed();
+  }
   
   for(int i=1; i<NUM_CYL_POINTS; i++) {
     physics.makeAttraction(mouse, particles_cyl[i], 1000, 15);
+    //particles_cyl[i].makeFixed(); // TODO: remove this
   }
-  particles_cyl[0].makeFixed();
+  if(!nothing_fixed) {
+    particles_cyl[0].makeFixed();
+    particles_cyl[1].makeFixed();
+    particles_cyl[5].makeFixed();
+    particles_cyl[4].makeFixed();
+  }
   
   // make all particles repel each other a little bit
   for(int i=1; i<NUM_CUBE_POINTS; i++) {
@@ -284,6 +349,10 @@ void draw() {
       line( particles_left_cube[ left_cube_links_type1[i][0] ].position().x(), particles_left_cube[ left_cube_links_type1[i][0] ].position().y(), particles_left_cube[ left_cube_links_type1[i][1] ].position().x(), particles_left_cube[ left_cube_links_type1[i][1] ].position().y());
       line( particles_right_cube[ right_cube_links_type1[i][0] ].position().x(), particles_right_cube[ right_cube_links_type1[i][0] ].position().y(), particles_right_cube[ right_cube_links_type1[i][1] ].position().x(), particles_right_cube[ right_cube_links_type1[i][1] ].position().y());
     }
+    
+    for(int i=0; i<NUM_CYL_POINTS; i++) {
+      line( particles_cyl[ cyl_links_type1[i][0] ].position().x(), particles_cyl[ cyl_links_type1[i][0] ].position().y(), particles_cyl[ cyl_links_type1[i][1] ].position().x(), particles_cyl[ cyl_links_type1[i][1] ].position().y());
+    }
     noStroke();
   
   } else if(link_type == 2) {
@@ -293,6 +362,10 @@ void draw() {
     for(int i=0; i<NUM_CUBE_POINTS+2; i++) {
       line( particles_left_cube[ left_cube_links_type2[i][0] ].position().x(), particles_left_cube[ left_cube_links_type2[i][0] ].position().y(), particles_left_cube[ left_cube_links_type2[i][1] ].position().x(), particles_left_cube[ left_cube_links_type2[i][1] ].position().y());
       line( particles_right_cube[ right_cube_links_type2[i][0] ].position().x(), particles_right_cube[ right_cube_links_type2[i][0] ].position().y(), particles_right_cube[ right_cube_links_type2[i][1] ].position().x(), particles_right_cube[ right_cube_links_type2[i][1] ].position().y());
+    }
+    
+    for(int i=0; i<NUM_CYL_POINTS+4; i++) {
+      line( particles_cyl[ cyl_links_type2[i][0] ].position().x(), particles_cyl[ cyl_links_type2[i][0] ].position().y(), particles_cyl[ cyl_links_type2[i][1] ].position().x(), particles_cyl[ cyl_links_type2[i][1] ].position().y());
     }
     noStroke();
   
